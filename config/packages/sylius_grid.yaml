@@ -1,0 +1,83 @@
+sylius_grid:
+    grids:
+        app_admin_course:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\Course\Course
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: translation.name
+                code:
+                    type: string
+                    label: sylius.ui.code
+                    sortable: ~
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete
+        app_admin_course_page:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\Course\CoursePage
+            sorting:
+                position: asc
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: translation.name
+                position:
+                    type: twig
+                    label: sylius.ui.position
+                    path: .
+                    sortable: position
+                    options:
+                        template: "@SyliusAdmin/ProductVariant/Grid/Field/position.html.twig"
+            filters:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    options:
+                        fields: [translation.name]
+            actions:
+                main:
+                    create:
+                        type: create
+                        options:
+                            link:
+                                parameters:
+                                    courseId: $courseId
+                item:
+                    update:
+                        type: update
+                        options:
+                            link:
+                                parameters:
+                                    id: resource.id
+                                    courseId: $courseId
+                    delete:
+                        type: delete
+                        options:
+                            link:
+                                parameters:
+                                    id: resource.id
+                                    courseId: $courseId
+                bulk:
+                    delete:
+                        type: delete
+                        options:
+                            link:
+                                parameters:
+                                    courseId: $courseId

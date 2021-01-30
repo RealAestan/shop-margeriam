@@ -5,7 +5,7 @@ imports:
     - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusApiBundle/Resources/config/app/config.yaml" }
 
-    - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
+#    - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
 
     - { resource: "@BitBagSyliusMolliePlugin/Resources/config/config.yaml" }
 
@@ -257,3 +257,10 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - "%kernel.project_dir%/themes"
+
+winzou_state_machine:
+  sylius_order_checkout:
+    transitions:
+      complete:
+        from: [payment_selected, payment_skipped, addressed, shipping_skipped, payment_selected, cart]
+        to: completed

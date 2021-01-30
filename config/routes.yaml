@@ -1,2 +1,47 @@
 bitbag_sylius_mollie_plugin:
     resource: "@BitBagSyliusMolliePlugin/Resources/config/routing.yaml"
+app_admin_course:
+    resource: |
+        alias: app.course
+        section: admin
+        path: /admin/app/course
+        permission: true
+        templates: "@SyliusAdmin\\Crud"
+        redirect: update
+        grid: app_admin_course
+        vars:
+            all:
+                subheader: app.ui.course
+            index:
+                icon: 'book'
+    type: sylius.resource
+app_admin_course_page:
+    resource: |
+        alias: app.course_page
+        section: admin
+        path: /admin/app/course_page
+        permission: true
+        templates: "@SyliusAdmin\\Crud"
+        redirect: update
+        grid: app_admin_course_page
+        vars:
+            all:
+                subheader: app.ui.course_page
+            index:
+                icon: 'book'
+    type: sylius.resource
+sylius_shop_account_courses:
+    path: /account/courses
+    methods: [GET]
+    defaults:
+        _controller: App\Controller\CourseController:listAction
+sylius_shop_account_course:
+    path: /account/courses/{slug}
+    methods: [GET]
+    defaults:
+        _controller: App\Controller\CourseController:courseAction
+sylius_shop_account_course_page:
+    path: /account/courses/{slug}/{pageSlug}
+    methods: [GET]
+    defaults:
+        _controller: App\Controller\CourseController:coursePageAction

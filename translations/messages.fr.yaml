@@ -1,0 +1,4 @@
+sylius:
+    ui:
+        fill_in_your_billing_addresses: 'Renseignez votre adresse de facturation'
+'My courses': 'Mes cours'

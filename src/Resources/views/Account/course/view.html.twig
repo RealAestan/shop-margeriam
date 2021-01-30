@@ -1,0 +1,32 @@
+{% extends '@SyliusShop/Account/layout.html.twig' %}
+
+{% block title %}{{ 'My courses'|trans }} | {{ parent() }}{% endblock %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <a href="{{ path('sylius_shop_account_dashboard') }}" class="section">{{ 'sylius.ui.my_account'|trans }}</a>
+        <div class="divider"> / </div>
+        <a href="{{ path('sylius_shop_account_courses') }}" class="section">{{ 'My courses'|trans }}</a>
+        <div class="divider"> / </div>
+        <div class="active section">{{ course.name }}</div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+    <div class="ui segment">
+        <h1 class="ui dividing header">
+            {{ course.name }}
+        </h1>
+        <ul>
+            {% for page in pages %}
+                <li>
+                    <a href="{{ path('sylius_shop_account_course_page', {slug: course.slug, pageSlug: page.slug}) }}">
+                        {{ page.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

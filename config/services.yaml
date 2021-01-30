@@ -33,3 +33,52 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    app.listener.admin.menu_builder:
+        class: App\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+    app.course.form.type:
+        class: App\Form\Type\CourseType
+        tags:
+            - { name: form.type }
+        arguments: ['App\Entity\Course\Course', ['sylius']]
+    app.course_translation.form.type:
+        class: App\Form\Type\CourseTranslationType
+        tags:
+            - { name: form.type }
+        arguments: ['App\Entity\Course\CourseTranslation', ['sylius']]
+    app.course_page.form.type:
+        class: App\Form\Type\CoursePageType
+        tags:
+            - { name: form.type }
+        arguments: ['App\Entity\Course\CoursePage', ['sylius']]
+    app.course_page_translation.form.type:
+        class: App\Form\Type\CoursePageTranslationType
+        tags:
+            - { name: form.type }
+        arguments: ['App\Entity\Course\CoursePageTranslation', ['sylius']]
+    app.form.extension.type.product_variant:
+        class: App\Form\Extension\ProductVariantTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
+    app.block_event_listener.admin.layout.javascripts:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '/Admin/_javascripts.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }
+    app.block_event_listener.admin.layout.stylesheets:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '/Admin/_stylesheets.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.stylesheets, method: onBlockEvent }
+    app.listener.shop.menu_builder:
+        class: App\Menu\AccountMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.shop.account, method: addAccountMenuItems }
+    app.listener.shop.order_listener:
+        class: App\Order\OrderEventListener
+        tags:
+            - { name: doctrine.event_listener, event: postUpdate }

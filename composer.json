@@ -1,5 +1,12 @@
 {
-    "keywords": ["symfony", "sylius", "distribution", "ecommerce", "cart", "shopping"],
+    "keywords": [
+        "symfony",
+        "sylius",
+        "distribution",
+        "ecommerce",
+        "cart",
+        "shopping"
+    ],
     "type": "project",
     "license": "proprietary",
     "homepage": "https://sylius.com",
@@ -16,10 +23,11 @@
     ],
     "require": {
         "php": "^7.3",
-        "bitbag/mollie-plugin": "^3.3",
+        "bitbag/mollie-plugin": "dev-master as 3.3.5",
         "sylius/sylius": "~1.8.0",
         "symfony/dotenv": "^4.4",
-        "symfony/flex": "^1.9"
+        "symfony/flex": "^1.9",
+        "symfony/webpack-encore-bundle": "^1.9"
     },
     "require-dev": {
         "behat/behat": "^3.7",
@@ -46,6 +54,7 @@
         "symfony/browser-kit": "^4.4",
         "symfony/debug-bundle": "^4.4",
         "symfony/intl": "^4.4",
+        "symfony/maker-bundle": "^1.28",
         "symfony/web-profiler-bundle": "^4.4"
     },
     "conflict": {
@@ -61,7 +70,9 @@
         "psr-4": {
             "App\\Tests\\": "tests/"
         },
-        "classmap": ["src/Kernel.php"]
+        "classmap": [
+            "src/Kernel.php"
+        ]
     },
     "scripts": {
         "auto-scripts": {

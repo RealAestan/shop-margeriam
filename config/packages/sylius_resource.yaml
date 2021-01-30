@@ -1,0 +1,19 @@
+sylius_resource:
+    resources:
+        app.course:
+            driver: doctrine/orm
+            classes:
+                model: App\Entity\Course\Course
+                form: App\Form\Type\CourseType
+            translation:
+                classes:
+                    model: App\Entity\Course\CourseTranslation
+                    form: App\Form\Type\CourseTranslationType
+        app.course_page:
+            classes:
+                model: App\Entity\Course\CoursePage
+                form: App\Form\Type\CoursePageType
+            translation:
+                classes:
+                    model: App\Entity\Course\CoursePageTranslation
+                    form: App\Form\Type\CoursePageTranslationType

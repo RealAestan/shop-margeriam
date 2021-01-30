@@ -93,6 +93,11 @@ services:
     ports:
       - "8025:8025"
 
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+
 volumes:
   mysql-data:
   public-media:

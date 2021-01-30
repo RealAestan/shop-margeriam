@@ -1,0 +1,4 @@
+sylius:
+    ui:
+        fill_in_your_billing_addresses: 'Заполните свой адрес, чтобы отправить счет'
+'My courses': 'Мои курсы'

@@ -30,6 +30,22 @@ Encore
   .setOutputPath('public/build/admin/')
   .setPublicPath('/build/admin')
   .addEntry('admin-entry', './assets/admin/entry.js')
+  .copyFiles({
+    from: './node_modules/tinymce/skins',
+    to: '/skins/[path][name].[ext]',
+  })
+  .copyFiles({
+    from: './node_modules/tinymce/themes',
+    to: '/themes/[path][name].[ext]',
+  })
+  .copyFiles({
+    from: './node_modules/tinymce/icons',
+    to: '/icons/[path][name].[ext]',
+  })
+  .copyFiles({
+    from: './node_modules/tinymce/plugins',
+    to: '/plugins/[path][name].[ext]',
+  })
   .disableSingleRuntimeChunk()
   .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
