@@ -14,7 +14,7 @@ final class Version20180718125528 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE sylius_refund_refund ADD type VARCHAR(255) NOT NULL, CHANGE refundedunitid refunded_unit_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE sylius_refund_refund ADD type VARCHAR(255) NOT NULL, ADD refunded_unit_id INT DEFAULT NULL');
         $this->addSql('CREATE UNIQUE INDEX UNIQ_DEF86A0EE8F826668CDE5729 ON sylius_refund_refund (refunded_unit_id, type)');
     }
 
@@ -24,6 +24,6 @@ final class Version20180718125528 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('DROP INDEX UNIQ_DEF86A0EE8F826668CDE5729 ON sylius_refund_refund');
-        $this->addSql('ALTER TABLE sylius_refund_refund DROP type, CHANGE refunded_unit_id refundedUnitId INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE sylius_refund_refund DROP type, DROP refunded_unit_id');
     }
 }
