@@ -67,4 +67,7 @@ return [
     BitBag\SyliusMolliePlugin\BitBagSyliusMolliePlugin::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
+    BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class => ['all' => true],
+    FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true], // WYSIWYG editor
+    SitemapPlugin\SitemapPlugin::class => ['all' => true], // Sitemap support
 ];

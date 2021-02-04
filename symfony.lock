@@ -37,6 +37,9 @@
     "behat/transliterator": {
         "version": "v1.2.0"
     },
+    "bitbag/cms-plugin": {
+        "version": "v2.4.0"
+    },
     "bitbag/mollie-plugin": {
         "version": "v3.3.5"
     },
@@ -178,6 +181,15 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.1"
     },
+    "friendsofsymfony/ckeditor-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "8eb1cd0962ded6a6d6e1e5a9b6d3e888f9f94ff6"
+        }
+    },
     "friendsofsymfony/jsrouting-bundle": {
         "version": "2.3",
         "recipe": {
@@ -306,6 +318,9 @@
     },
     "lcobucci/jwt": {
         "version": "3.3.2"
+    },
+    "league/csv": {
+        "version": "9.6.2"
     },
     "league/uri": {
         "version": "5.3.0"
@@ -609,6 +624,15 @@
     },
     "squizlabs/php_codesniffer": {
         "version": "3.3.1"
+    },
+    "stefandoorn/sitemap-plugin": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "1793537db1cc9b0618d53f60bb3962930cdc3bed"
+        }
     },
     "stof/doctrine-extensions-bundle": {
         "version": "1.2",

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Form\Type;
 
+use BitBag\SyliusCmsPlugin\Form\Type\WysiwygType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -23,11 +23,8 @@ class CoursePageTranslationType extends AbstractResourceType
             ->add('slug', TextType::class, [
                 'label' => 'sylius.form.course_page.slug',
             ])
-            ->add('content', TextareaType::class, [
+            ->add('content', WysiwygType::class, [
                 'label' => 'sylius.form.course_page.content',
-                'attr' => [
-                    'class' => 'editor',
-                ]
             ])
         ;
     }

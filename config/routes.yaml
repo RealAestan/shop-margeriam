@@ -1,5 +1,7 @@
 bitbag_sylius_mollie_plugin:
     resource: "@BitBagSyliusMolliePlugin/Resources/config/routing.yaml"
+bitbag_sylius_cms_plugin:
+    resource: "@BitBagSyliusCmsPlugin/Resources/config/routing.yml"
 app_admin_course:
     resource: |
         alias: app.course
