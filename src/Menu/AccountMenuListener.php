@@ -14,7 +14,7 @@ class AccountMenuListener
 
         $menu
             ->addChild('new', ['route' => 'sylius_shop_account_courses'])
-            ->setLabel('My courses')
+            ->setLabel('sylius.ui.account.courses.menu')
         ;
     }
 }
