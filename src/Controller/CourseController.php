@@ -28,10 +28,19 @@ class CourseController extends AbstractController
         );
     }
 
-    public function courseAction(string $slug, EntityRepository $courseTranslationRepository, EntityRepository $courseRepository)
+    public function courseAction(string $slug, EntityRepository $courseTranslationRepository)
     {
+
         $courseTranslation = $courseTranslationRepository->findOneBy(['slug' => $slug]);
         if (!$courseTranslation instanceof CourseTranslation) {
+            return $this->redirectToRoute('sylius_shop_account_courses');
+        }
+        /** @var Course $course */
+        $course = $courseTranslation->getTranslatable();
+        /** @var ShopUser $user */
+        $user = $this->getUser();
+        $courses = $user->getCourses();
+        if (!$courses->contains($course)) {
             return $this->redirectToRoute('sylius_shop_account_courses');
         }
 
@@ -54,6 +63,14 @@ class CourseController extends AbstractController
     {
         $courseTranslation = $courseTranslationRepository->findOneBy(['slug' => $slug]);
         if (!$courseTranslation instanceof CourseTranslation) {
+            return $this->redirectToRoute('sylius_shop_account_courses');
+        }
+        /** @var Course $course */
+        $course = $courseTranslation->getTranslatable();
+        /** @var ShopUser $user */
+        $user = $this->getUser();
+        $courses = $user->getCourses();
+        if (!$courses->contains($course)) {
             return $this->redirectToRoute('sylius_shop_account_courses');
         }
 
