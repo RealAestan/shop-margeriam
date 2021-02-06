@@ -33,17 +33,23 @@ app_admin_course_page:
                 icon: 'book'
     type: sylius.resource
 sylius_shop_account_courses:
-    path: /account/courses
+    path: /{_locale}/account/courses
     methods: [GET]
     defaults:
         _controller: App\Controller\CourseController:listAction
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
 sylius_shop_account_course:
-    path: /account/courses/{slug}
+    path: /{_locale}/account/courses/{slug}
     methods: [GET]
     defaults:
         _controller: App\Controller\CourseController:courseAction
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
 sylius_shop_account_course_page:
-    path: /account/courses/{slug}/{pageSlug}
+    path: /{_locale}/account/courses/{slug}/{pageSlug}
     methods: [GET]
     defaults:
         _controller: App\Controller\CourseController:coursePageAction
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
