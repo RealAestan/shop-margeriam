@@ -19,7 +19,7 @@
         <h1 class="ui dividing header">
             {{ course.name }}
         </h1>
-        <ul>
+        <ol>
             {% for page in pages %}
                 <li>
                     <a href="{{ path('sylius_shop_account_course_page', {slug: course.slug, pageSlug: page.slug}) }}">
@@ -27,6 +27,6 @@
                     </a>
                 </li>
             {% endfor %}
-        </ul>
+        </ol>
     </div>
 {% endblock %}
