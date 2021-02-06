@@ -1,4 +1,7 @@
 sylius:
     ui:
         fill_in_your_billing_addresses: 'Fill in your billing address'
-'My courses': 'My courses'
+        account:
+            courses:
+                menu: 'My courses'
+                empty: 'You have not yet purchased a course.'

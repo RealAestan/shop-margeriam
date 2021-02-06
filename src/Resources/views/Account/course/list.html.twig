@@ -8,12 +8,17 @@
         <div class="divider"> / </div>
         <a href="{{ path('sylius_shop_account_dashboard') }}" class="section">{{ 'sylius.ui.my_account'|trans }}</a>
         <div class="divider"> / </div>
-        <div class="active section">{{ 'My courses'|trans }}</div>
+        <div class="active section">{{ 'sylius.ui.account.courses.menu'|trans }}</div>
     </div>
 {% endblock %}
 
 {% block subcontent %}
     <div class="ui segment">
+        {% if courses|length == 0 %}
+            <p style="font-size: 16px;text-align: center;margin: 1em 0;">
+                {{ 'sylius.ui.account.courses.empty'|trans }}
+            </p>
+        {% endif %}
         <ul>
             {% for course in courses %}
                 <li>
