@@ -57,7 +57,7 @@ services:
         class: App\Form\Type\CoursePageTranslationType
         tags:
             - { name: form.type }
-        arguments: ['App\Entity\Course\CoursePageTranslation', ['sylius']]
+        arguments: ['App\Entity\Course\CoursePageTranslation', ['sylius'], '@router.default']
     app.form.extension.type.product_variant:
         class: App\Form\Extension\ProductVariantTypeExtension
         tags:

@@ -8,9 +8,18 @@ use BitBag\SyliusCmsPlugin\Form\Type\WysiwygType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class CoursePageTranslationType extends AbstractResourceType
 {
+    private $urlGenerator;
+
+    public function __construct(string $dataClass, array $validationGroups = [], UrlGeneratorInterface $urlGenerator)
+    {
+        parent::__construct($dataClass, $validationGroups);
+        $this->urlGenerator = $urlGenerator;
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -25,6 +34,17 @@ class CoursePageTranslationType extends AbstractResourceType
             ])
             ->add('content', WysiwygType::class, [
                 'label' => 'sylius.form.course_page.content',
+                'config' => [
+                    'extraPlugins' => 'image2',
+                    'image2_altRequired' => true,
+                    'filebrowserUploadUrl' => $this->urlGenerator->generate('bitbag_sylius_cms_plugin_admin_upload_editor_image'),
+                ],
+                'plugins' => [
+                    'wordcount' => [
+                        'path'     => '/bundles/fosckeditor/image2/', // with trailing slash
+                        'filename' => 'plugin.js',
+                    ],
+                ],
             ])
         ;
     }

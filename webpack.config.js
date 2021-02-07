@@ -60,4 +60,25 @@ adminConfig.resolve.alias['sylius/bundle'] = syliusBundles;
 adminConfig.externals = Object.assign({}, adminConfig.externals, { window: 'window', document: 'document' });
 adminConfig.name = 'admin';
 
-module.exports = [shopConfig, adminConfig];
+Encore.reset();
+
+Encore
+  .setOutputPath('public/bundles/fosckeditor/plugins/')
+  .setPublicPath('/bundles/fosckeditor/plugins')
+  .addEntry('bundles', './assets/admin/entry.js')
+  .copyFiles({
+    from: './image2',
+    to: '/image2/[path][name].[ext]',
+  })
+  .disableSingleRuntimeChunk()
+  .enableSassLoader();
+
+const bundleConfig = Encore.getWebpackConfig();
+
+bundleConfig.resolve.alias['sylius/ui'] = uiBundleScripts;
+bundleConfig.resolve.alias['sylius/ui-resources'] = uiBundleResources;
+bundleConfig.resolve.alias['sylius/bundle'] = syliusBundles;
+bundleConfig.externals = Object.assign({}, bundleConfig.externals, { window: 'window', document: 'document' });
+bundleConfig.name = 'bundle';
+
+module.exports = [shopConfig, adminConfig, bundleConfig];
