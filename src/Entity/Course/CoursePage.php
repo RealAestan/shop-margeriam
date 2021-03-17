@@ -101,4 +101,34 @@ class CoursePage implements TranslatableInterface, ResourceInterface
     {
         return $this->getTranslation()->getContent();
     }
+
+    public function getPreviousPage(): ?CoursePage
+    {
+        $pages = $this->getCourse()->getPages();
+        $index = $pages->indexOf($this);
+        if (is_int($index)) {
+            if ($index === 0) {
+                return null;
+            } else {
+                return $pages->get(--$index);
+            }
+        }
+
+        return null;
+    }
+
+    public function getNextPage(): ?CoursePage
+    {
+        $pages = $this->getCourse()->getPages();
+        $index = $pages->indexOf($this);
+        if (is_int($index)) {
+            if ($index === $pages->count() - 1) {
+                return null;
+            } else {
+                return $pages->get(++$index);
+            }
+        }
+
+        return null;
+    }
 }

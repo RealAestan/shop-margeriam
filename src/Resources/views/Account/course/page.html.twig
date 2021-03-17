@@ -42,7 +42,25 @@
             }
         </style>
         <div>
+            {% set previousPage = coursePage.previousPage %}
+            {% set nextPage = coursePage.nextPage %}
+            <div style="display: flex;justify-content: space-between; flex-wrap: wrap;">
+                {% if previousPage %}
+                    <a href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: previousPage.slug}) }}">{{ previousPage.name }}</a>
+                {% endif %}
+                {% if nextPage %}
+                    <a href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: nextPage.slug}) }}">{{ nextPage.name }}</a>
+                {% endif %}
+            </div>
             {{ coursePage.content|raw }}
+            <div style="display: flex;justify-content: space-between; flex-wrap: wrap;">
+                {% if previousPage %}
+                    <a href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: previousPage.slug}) }}">{{ previousPage.name }}</a>
+                {% endif %}
+                {% if nextPage %}
+                    <a href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: nextPage.slug}) }}">{{ nextPage.name }}</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}
