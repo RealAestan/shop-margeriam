@@ -57,9 +57,11 @@
                 opacity: 0;
                 transition: transform 0.5s, opacity 0.3s;
             }
-            .showScrollBtn {
-                transform: translateY(0) !important;
-                opacity: 1 !important;
+            @media screen and (max-width: 767px) {
+                .showScrollBtn {
+                    transform: translateY(0) !important;
+                    opacity: 1 !important;
+                }
             }
         </style>
         <div class="course-container">
@@ -92,7 +94,7 @@
 				document.addEventListener("scroll", handleScroll);
 				function handleScroll() {
 					var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-					var GOLDEN_RATIO = 0.5;
+					var GOLDEN_RATIO = 0.2;
 
 					if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
 						if(!scrollToTopBtn.classList.contains("showScrollBtn"))
