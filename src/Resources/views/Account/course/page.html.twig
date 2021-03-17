@@ -39,9 +39,27 @@
             figcaption {
                 text-align: center;
             }
-            img, iframe {
+            img {
                 max-width: 100%;
                 height: auto;
+            }
+            iframe {
+                max-width: 100%;
+            }
+            #scrollToTopBtn {
+                position: fixed;
+                right: 50px;
+                bottom: 50px;
+                z-index: 1;
+                color: #ffffff;
+                background-color: rgba(0, 0, 0, 0.3);
+                transform: translateY(100px);
+                opacity: 0;
+                transition: transform 0.5s, opacity 0.3s;
+            }
+            .showScrollBtn {
+                transform: translateY(0);
+                opacity: 1;
             }
         </style>
         <div class="course-container">
@@ -58,12 +76,40 @@
                     <span></span>
                 {% endif %}
                 {% if nextPage %}
-                    <a style="margin: 5px 0 5px 5px;" class="ui primary icon labeled button" href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: nextPage.slug}) }}">
+                    <a style="margin: 5px 0 5px 0;" class="ui primary icon labeled button" href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: nextPage.slug}) }}">
                         {{ nextPage.name }}
                         <i class="arrow right icon"></i>
                     </a>
                 {% endif %}
             </div>
         </div>
+        <button class="ui button icon" id="scrollToTopBtn">
+            <i class="arrow up icon"></i>
+        </button>
+        <script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var scrollToTopBtn = document.querySelector("#scrollToTopBtn");
+				document.addEventListener("scroll", handleScroll);
+				function handleScroll() {
+					var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+					var GOLDEN_RATIO = 0.5;
+
+					if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
+						if(!scrollToTopBtn.classList.contains("showScrollBtn"))
+							scrollToTopBtn.classList.add("showScrollBtn")
+					} else {
+						if(scrollToTopBtn.classList.contains("showScrollBtn"))
+							scrollToTopBtn.classList.remove("showScrollBtn")
+					}
+				}
+				scrollToTopBtn.addEventListener("click", scrollToTop);
+				function scrollToTop() {
+					window.scrollTo({
+						top: 0,
+						behavior: "smooth"
+					});
+				}
+			});
+        </script>
     </div>
 {% endblock %}
