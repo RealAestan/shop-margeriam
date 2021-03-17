@@ -21,7 +21,7 @@
 
 <body class="pushable">
 {{ sylius_template_event('sylius.shop.layout.before_body') }}
-<div class="pusher">
+<div class="pusher" id="app">
     {% block top %}
         <div id="menu" class="ui large sticky stackable menu">
             {{ sylius_template_event('sylius.shop.layout.topbar') }}
