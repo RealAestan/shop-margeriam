@@ -10,7 +10,6 @@ const orejimeConfig = {
   cookieExpiresAfterDays: 365,
   stringifyCookie: contents => JSON.stringify(contents),
   parseCookie: cookie => JSON.parse(cookie),
-  lang: 'ru',
   privacyPolicy: '/privacy-policy',
   default: true,
   mustConsent: false,
