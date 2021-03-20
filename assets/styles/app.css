@@ -1,3 +1,11 @@
 body {
     background-color: lightgray;
 }
+
+.ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item {
+    color: rgba(0,0,0,1);
+}
+
+.ui.link.list.list .item a:not(.ui):hover, .ui.link.list.list a.item:hover {
+    color: rgba(0,0,0,.8);
+}
