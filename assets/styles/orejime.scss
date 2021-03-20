@@ -2,9 +2,7 @@ $orejime-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0
 $orejime-border-radius: 4px !default;
 
 $orejime-blue: #1a73e8 !default;
-$orejime-secondary-blue: #2b7de9 !default;
-$orejime-green: #2e7d32 !default;
-$orejime-secondary-green: #388e3c !default;
+$orejime-green: #008a28 !default;
 
 $orejime-theme-bg: #000 !default;
 $orejime-theme-border: 1px solid #555 !default;
@@ -55,7 +53,7 @@ $orejime-breakpoint-notice: 990px !default;
 .orejime-Button--accept {
   background: $orejime-green;
   &:hover {
-    background: $orejime-secondary-green;
+    text-decoration: underline;
   }
 }
 
@@ -66,7 +64,7 @@ $orejime-breakpoint-notice: 990px !default;
 .orejime-Button--info {
   background: $orejime-blue;
   &:hover {
-    background: $orejime-secondary-blue;
+    text-decoration: underline;
   }
 }
 
