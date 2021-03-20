@@ -1,10 +1,10 @@
 $orejime-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19) !default;
 $orejime-border-radius: 4px !default;
 
-$orejime-blue: #2185d0 !default;
-$orejime-secondary-blue: #1678c2 !default;
-$orejime-green: #21ba45 !default;
-$orejime-secondary-green: #16ab39 !default;
+$orejime-blue: #1a73e8 !default;
+$orejime-secondary-blue: #2b7de9 !default;
+$orejime-green: #2e7d32 !default;
+$orejime-secondary-green: #388e3c !default;
 
 $orejime-theme-bg: #000 !default;
 $orejime-theme-border: 1px solid #555 !default;
@@ -45,7 +45,6 @@ $orejime-breakpoint-notice: 990px !default;
   border: 1px solid transparent;
   font-weight: 700;
   min-height: 1em;
-  font-size: 1.1em;
 
   &[disabled] {
     opacity: 0.75;
