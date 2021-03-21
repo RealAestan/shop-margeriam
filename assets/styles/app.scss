@@ -1,9 +1,10 @@
 .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item {
-  color: rgba(0,0,0,1);
+  color: rgba(0,0,0,.8);
+  padding: .3em 0;
 }
 
 .ui.link.list.list .item a:not(.ui):hover, .ui.link.list.list a.item:hover {
-  color: rgba(0,0,0,.8);
+  color: rgba(0,0,0,1);
 }
 
 .ui.breadcrumb a {
