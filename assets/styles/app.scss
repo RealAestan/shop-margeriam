@@ -1,6 +1,7 @@
 .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item {
   color: rgba(0,0,0,.8);
-  padding: .3em 0;
+  padding: 0;
+  margin: 0.575em 0;
 }
 
 .ui.link.list.list .item a:not(.ui):hover, .ui.link.list.list a.item:hover {
