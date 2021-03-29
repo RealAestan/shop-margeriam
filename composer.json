@@ -23,7 +23,7 @@
     ],
     "require": {
         "php": "^7.3",
-        "bitbag/cms-plugin": "^2.4",
+        "bitbag/cms-plugin": "dev-master",
         "bitbag/mollie-plugin": "dev-master as 3.3.5",
         "sylius/sylius": "~1.8.0",
         "symfony/dotenv": "^4.4",

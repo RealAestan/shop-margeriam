@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46d435cbd9ea08003b45b38450fa8a5d",
+    "content-hash": "417ceb6a9cebd28454e4808106667d65",
     "packages": [
         {
             "name": "api-platform/core",
@@ -213,16 +213,16 @@
         },
         {
             "name": "bitbag/cms-plugin",
-            "version": "v2.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitBagCommerce/SyliusCmsPlugin.git",
-                "reference": "b8bb133358fc26b37b403909ffe8d6acad48f7b8"
+                "reference": "e1c3af6d47a859b9a096e3e8e125dafeb4f75448"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitBagCommerce/SyliusCmsPlugin/zipball/b8bb133358fc26b37b403909ffe8d6acad48f7b8",
-                "reference": "b8bb133358fc26b37b403909ffe8d6acad48f7b8",
+                "url": "https://api.github.com/repos/BitBagCommerce/SyliusCmsPlugin/zipball/e1c3af6d47a859b9a096e3e8e125dafeb4f75448",
+                "reference": "e1c3af6d47a859b9a096e3e8e125dafeb4f75448",
                 "shasum": ""
             },
             "require": {
@@ -230,7 +230,7 @@
                 "league/csv": "^9.1",
                 "php": "^7.3",
                 "stefandoorn/sitemap-plugin": "^1.0",
-                "sylius/sylius": "^1.7"
+                "sylius/sylius": "^1.8"
             },
             "conflict": {
                 "symfony/browser-kit": "4.1.8",
@@ -253,10 +253,10 @@
                 "lchrusciel/api-test-case": "^3.0",
                 "matthiasnoback/symfony-config-test": "^3.0",
                 "phpspec/phpspec": "^6.0",
-                "phpstan/phpstan-doctrine": "^0.10",
-                "phpstan/phpstan-shim": "^0.10",
-                "phpstan/phpstan-symfony": "^0.10",
-                "phpstan/phpstan-webmozart-assert": "^0.10",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-doctrine": "^0.12",
+                "phpstan/phpstan-symfony": "^0.12",
+                "phpstan/phpstan-webmozart-assert": "^0.12",
                 "phpunit/phpunit": "^6.5",
                 "sensiolabs/security-checker": "^5.0",
                 "sylius-labs/coding-standard": "^3.0",
@@ -267,6 +267,7 @@
                 "symfony/web-profiler-bundle": "^4.4",
                 "symfony/web-server-bundle": "^4.4"
             },
+            "default-branch": true,
             "type": "sylius-plugin",
             "autoload": {
                 "psr-4": {
@@ -286,9 +287,9 @@
             ],
             "support": {
                 "issues": "https://github.com/BitBagCommerce/SyliusCmsPlugin/issues",
-                "source": "https://github.com/BitBagCommerce/SyliusCmsPlugin/tree/v2.4.0"
+                "source": "https://github.com/BitBagCommerce/SyliusCmsPlugin/tree/master"
             },
-            "time": "2020-04-26T14:01:39+00:00"
+            "time": "2021-01-10T10:26:19+00:00"
         },
         {
             "name": "bitbag/mollie-plugin",
@@ -19902,6 +19903,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "bitbag/cms-plugin": 20,
         "bitbag/mollie-plugin": 20
     },
     "prefer-stable": true,
