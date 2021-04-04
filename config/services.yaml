@@ -62,7 +62,7 @@ services:
         class: App\Form\Extension\ProductVariantTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
-    app.form.extension.type.product_variant:
+    app.form.extension.type.product_translation:
         class: App\Form\Extension\ProductTranslationTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductTranslationType }
