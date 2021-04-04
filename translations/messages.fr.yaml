@@ -5,3 +5,4 @@ sylius:
             courses:
                 menu: 'Mes cours'
                 empty: 'Vous n''avez pas encore acheté de cours'
+around: 'around'
