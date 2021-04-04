@@ -64,7 +64,7 @@ class UpdateExchangeRatesCommand extends Command
         } else {
             $parsedXML = new \SimpleXMLElement(file_get_contents($exchangeRatesUrl));
             foreach($parsedXML->Cube->Cube->children() as $rate) {
-                $currentExchangeRates['EUR'][(string) $rate['currency']] = floatval($rate['rate'])];
+                $currentExchangeRates['EUR'][(string) $rate['currency']] = floatval($rate['rate']);
             }
         }
 
