@@ -17,14 +17,14 @@
                     <div class="ui horizontal divided list">
                         {% for optionValue in variant.optionValues %}
                             <div class="item">
-                                {{ optionValue.value }} ({{ amount|sylius_convert_money(sylius.channel.baseCurrency.code, 'RUB')|sylius_format_money('RUB', sylius.localeCode) }})
+                                {{ optionValue.value }}
                             </div>
                         {% endfor %}
                     </div>
                 {% endif %}
             </td>
             <td class="sylius-product-variant-price" {% if variant|sylius_has_discount({'channel': sylius.channel}) %}data-original-price="{{ money.calculateOriginalPrice(variant) }}"{% endif %}>
-                {{ money.calculatePrice(variant) }}
+                {{ money.calculatePrice(variant) }} ({{ variant|sylius_calculate_price({'channel': sylius.channel})|sylius_convert_money(sylius.channel.baseCurrency.code, 'RUB')|sylius_format_money('RUB', sylius.localeCode) }})
             </td>
             <td class="right aligned">
                 {{ form_widget(form.cartItem.variant[key], {'label': false}) }}
