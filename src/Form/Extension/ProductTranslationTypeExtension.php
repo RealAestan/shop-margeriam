@@ -3,18 +3,17 @@
 namespace App\Form\Extension;
 
 use BitBag\SyliusCmsPlugin\Form\Type\WysiwygType;
-use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ProductBundle\Form\Type\ProductTranslationType as BaseProductTranslationType;
+use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class ProductTranslationTypeExtension extends AbstractResourceType
+class ProductTranslationTypeExtension extends AbstractTypeExtension
 {
     private $urlGenerator;
 
-    public function __construct(string $dataClass, array $validationGroups = [], UrlGeneratorInterface $urlGenerator)
+    public function __construct(UrlGeneratorInterface $urlGenerator)
     {
-        parent::__construct($dataClass, $validationGroups);
         $this->urlGenerator = $urlGenerator;
     }
 

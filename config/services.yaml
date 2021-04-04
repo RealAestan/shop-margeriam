@@ -66,10 +66,6 @@ services:
         class: App\Form\Extension\ProductTranslationTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductTranslationType }
-        arguments:
-            - '%sylius.model.product_variant.class%'
-            - '%sylius.form.type.product_variant.validation_groups%'
-            - '@router.default'
     app.block_event_listener.admin.layout.javascripts:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
