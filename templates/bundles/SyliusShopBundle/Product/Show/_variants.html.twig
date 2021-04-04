@@ -17,7 +17,7 @@
                     <div class="ui horizontal divided list">
                         {% for optionValue in variant.optionValues %}
                             <div class="item">
-                                {{ optionValue.value }} ({{- format(amount|sylius_convert_money(sylius.channel.baseCurrency.code, 'RUB'), 'RUB') -}})
+                                {{ optionValue.value }} ({{ amount|sylius_convert_money(sylius.channel.baseCurrency.code, 'RUB')|sylius_format_money('RUB', sylius.localeCode) }})
                             </div>
                         {% endfor %}
                     </div>
