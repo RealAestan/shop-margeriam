@@ -21,6 +21,7 @@ class ProductTranslationTypeExtension extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->remove('description')
             ->add('description', WysiwygType::class, [
                 'required' => false,
                 'label' => 'sylius.form.product.description',
