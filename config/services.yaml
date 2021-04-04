@@ -58,10 +58,10 @@ services:
         tags:
             - { name: form.type }
         arguments: ['App\Entity\Course\CoursePageTranslation', ['sylius'], '@router.default']
-    app.form.extension.type.product_variant:
-        class: App\Form\Extension\ProductVariantTypeExtension
-        tags:
-            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
+#    app.form.extension.type.product_variant:
+#        class: App\Form\Extension\ProductVariantTypeExtension
+#        tags:
+#            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
     app.block_event_listener.admin.layout.javascripts:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
