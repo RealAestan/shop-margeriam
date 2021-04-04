@@ -52,18 +52,11 @@ class UpdateExchangeRatesCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $io->title($this->getName() . ' started at ' . date('Y-m-d H:i:s'));
 
-        $currencies = [];
-        $exchangeRates = $this->exchangeRateRepository->findAll();
-        foreach ($exchangeRates as $exchangeRate) {
-            assert($exchangeRate instanceof ExchangeRateInterface);
-            assert($exchangeRate->getSourceCurrency() !== null);
-            $currencies[] = $exchangeRate->getSourceCurrency()->getCode();
-        }
-
         $exchangeRatesUrl = $input->getArgument('exchangeratesUrl');
         assert(is_string($exchangeRatesUrl));
         $xml = file_get_contents($exchangeRatesUrl);
         $currentExchangeRates = [];
+        $currentExchangeRates['EUR'] = [];
         if ($xml === false) {
             $errorMsg = 'Missing XML source';
             $io->warning($errorMsg);
@@ -71,10 +64,11 @@ class UpdateExchangeRatesCommand extends Command
         } else {
             $parsedXML = new \SimpleXMLElement(file_get_contents($exchangeRatesUrl));
             foreach($parsedXML->Cube->Cube->children() as $rate) {
-                $currentExchangeRates[(string) $rate['currency']] = ['EUR' => floatval($rate['rate'])];
+                $currentExchangeRates['EUR'] = [(string) $rate['currency'] => floatval($rate['rate'])];
             }
         }
 
+        $exchangeRates = $this->exchangeRateRepository->findAll();
         foreach ($exchangeRates as $exchangeRate) {
             assert($exchangeRate instanceof ExchangeRateInterface);
 
