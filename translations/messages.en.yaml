@@ -6,3 +6,4 @@ sylius:
                 menu: 'My courses'
                 empty: 'You have not yet purchased a course.'
 around: 'around'
+rate: 'Rate'

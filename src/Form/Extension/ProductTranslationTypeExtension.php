@@ -28,8 +28,22 @@ class ProductTranslationTypeExtension extends AbstractTypeExtension
                     'extraPlugins' => 'image2',
                     'image2_altRequired' => true,
                     'filebrowserUploadUrl' => $this->urlGenerator->generate('bitbag_sylius_cms_plugin_admin_upload_editor_image'),
-//                    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-//                    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                ],
+                'plugins' => [
+                    'wordcount' => [
+                        'path'     => '/bundles/fosckeditor/image2/', // with trailing slash
+                        'filename' => 'plugin.js',
+                    ],
+                ],
+            ])
+            ->remove('shortDescription')
+            ->add('shortDescription', WysiwygType::class, [
+                'required' => false,
+                'label' => 'sylius.form.product.short_description',
+                'config' => [
+                    'extraPlugins' => 'image2',
+                    'image2_altRequired' => true,
+                    'filebrowserUploadUrl' => $this->urlGenerator->generate('bitbag_sylius_cms_plugin_admin_upload_editor_image'),
                 ],
                 'plugins' => [
                     'wordcount' => [
