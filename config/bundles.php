@@ -70,4 +70,5 @@ return [
     BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class => ['all' => true],
     FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true],
     SitemapPlugin\SitemapPlugin::class => ['all' => true],
+    Sylius\InvoicingPlugin\SyliusInvoicingPlugin::class => ['all' => true],
 ];

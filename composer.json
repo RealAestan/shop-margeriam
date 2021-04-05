@@ -25,6 +25,7 @@
         "php": "^7.3",
         "bitbag/cms-plugin": "dev-master",
         "bitbag/mollie-plugin": "dev-master as 3.3.5",
+        "sylius/invoicing-plugin": "^0.14.0",
         "sylius/sylius": "~1.8.0",
         "symfony/dotenv": "^4.4",
         "symfony/flex": "^1.9",
