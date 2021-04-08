@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01f154f287f931b0ddd213898ad79853",
+    "content-hash": "ed63e70c52336dbb1edd965931e9c2ce",
     "packages": [
         {
             "name": "api-platform/core",
@@ -292,81 +292,6 @@
             "time": "2021-01-10T10:26:19+00:00"
         },
         {
-            "name": "bitbag/mollie-plugin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/BitBagCommerce/SyliusMolliePlugin.git",
-                "reference": "473dc55a479779a1220d3286a2003699cb845a62"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/BitBagCommerce/SyliusMolliePlugin/zipball/473dc55a479779a1220d3286a2003699cb845a62",
-                "reference": "473dc55a479779a1220d3286a2003699cb845a62",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "mollie/mollie-api-php": "^2.0",
-                "php": "^7.3",
-                "sylius/admin-order-creation-plugin": "^0.9.0",
-                "sylius/refund-plugin": "1.0.0-RC.5",
-                "sylius/sylius": "^1.8"
-            },
-            "conflict": {
-                "api-platform/core": ">=2.6.0",
-                "symfony/browser-kit": "4.1.8",
-                "symfony/dependency-injection": "4.4.19",
-                "symfony/dom-crawler": "4.1.8",
-                "symfony/routing": "4.1.8",
-                "symfony/symfony": "4.1.8"
-            },
-            "require-dev": {
-                "behat/behat": "^3.4",
-                "behat/mink": "^1.8",
-                "behat/mink-browserkit-driver": "^1.3",
-                "behat/mink-extension": "^2.3",
-                "behat/mink-selenium2-driver": "^1.4",
-                "friends-of-behat/page-object-extension": "^0.3",
-                "friends-of-behat/suite-settings-extension": "^1.0",
-                "friends-of-behat/symfony-extension": "^2.0",
-                "friends-of-behat/variadic-extension": "^1.1",
-                "lakion/mink-debug-extension": "^1.2.3",
-                "phpspec/phpspec": "^6.0",
-                "phpstan/phpstan": "0.12.29",
-                "phpstan/phpstan-webmozart-assert": "0.12.6",
-                "sensiolabs/security-checker": "^5.0",
-                "sylius-labs/coding-standard": "^2.0",
-                "symfony/browser-kit": "^3.4|^4.1",
-                "symfony/debug-bundle": "^3.4|^4.1",
-                "symfony/dotenv": "^4.2",
-                "symfony/intl": "^3.4|^4.1",
-                "symfony/web-profiler-bundle": "^3.4|^4.1",
-                "symfony/web-server-bundle": "^3.4|^4.1"
-            },
-            "default-branch": true,
-            "type": "sylius-plugin",
-            "autoload": {
-                "psr-4": {
-                    "BitBag\\SyliusMolliePlugin\\": "src/",
-                    "Tests\\BitBag\\SyliusMolliePlugin\\": [
-                        "tests/",
-                        "tests/Application/src"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Mollie payment plugin for Sylius applications.",
-            "support": {
-                "issues": "https://github.com/BitBagCommerce/SyliusMolliePlugin/issues",
-                "source": "https://github.com/BitBagCommerce/SyliusMolliePlugin/tree/master"
-            },
-            "time": "2021-01-29T15:06:35+00:00"
-        },
-        {
             "name": "clue/stream-filter",
             "version": "v1.5.0",
             "source": {
@@ -431,82 +356,6 @@
                 }
             ],
             "time": "2020-10-02T12:38:20+00:00"
-        },
-        {
-            "name": "composer/ca-bundle",
-            "version": "1.2.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "ext-pcre": "*",
-                "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12.55",
-                "psr/log": "^1.0",
-                "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\CaBundle\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
-            "keywords": [
-                "cabundle",
-                "cacert",
-                "certificate",
-                "ssl",
-                "tls"
-            ],
-            "support": {
-                "irc": "irc://irc.freenode.org/composer",
-                "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.2.9"
-            },
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-01-12T12:10:35+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -2238,6 +2087,199 @@
             "time": "2020-04-27T06:40:36+00:00"
         },
         {
+            "name": "flux-se/payum-stripe",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLUX-SE/PayumStripe.git",
+                "reference": "1832ee92aae3e4788ec7ce356772628c578d1fca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLUX-SE/PayumStripe/zipball/1832ee92aae3e4788ec7ce356772628c578d1fca",
+                "reference": "1832ee92aae3e4788ec7ce356772628c578d1fca",
+                "shasum": ""
+            },
+            "require": {
+                "payum/core": "^1.6",
+                "stripe/stripe-php": "^7"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php-http/guzzle6-adapter": "^2.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8|^9",
+                "symplify/easy-coding-standard": "^8|^9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluxSE\\PayumStripe\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis HILAIRE",
+                    "email": "Prometee@users.noreply.github.com"
+                }
+            ],
+            "description": "Payum Stripe gateways",
+            "support": {
+                "issues": "https://github.com/FLUX-SE/PayumStripe/issues",
+                "source": "https://github.com/FLUX-SE/PayumStripe/tree/v1.2.3"
+            },
+            "time": "2021-03-10T12:12:30+00:00"
+        },
+        {
+            "name": "flux-se/payum-stripe-bundle",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLUX-SE/PayumStripeBundle.git",
+                "reference": "091799a505383a6b431264fc13ce9362ffa42898"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLUX-SE/PayumStripeBundle/zipball/091799a505383a6b431264fc13ce9362ffa42898",
+                "reference": "091799a505383a6b431264fc13ce9362ffa42898",
+                "shasum": ""
+            },
+            "require": {
+                "flux-se/payum-stripe": "^1.2.1",
+                "symfony/config": "^4.1|^5.1.5",
+                "symfony/dependency-injection": "^4.1|^5.1.5",
+                "symfony/http-kernel": "^4.1|^5.1.5"
+            },
+            "require-dev": {
+                "php-http/guzzle6-adapter": "^2.0",
+                "phpunit/phpunit": "^8|^9",
+                "symplify/easy-coding-standard": "^8.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluxSE\\PayumStripeBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis HILAIRE",
+                    "email": "Prometee@users.noreply.github.com"
+                }
+            ],
+            "description": "Payum Stripe gateways bundle",
+            "support": {
+                "issues": "https://github.com/FLUX-SE/PayumStripeBundle/issues",
+                "source": "https://github.com/FLUX-SE/PayumStripeBundle/tree/v1.2.1"
+            },
+            "time": "2020-11-05T12:03:41+00:00"
+        },
+        {
+            "name": "flux-se/sylius-payum-stripe-plugin",
+            "version": "v1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FLUX-SE/SyliusPayumStripePlugin.git",
+                "reference": "7a7cd5efae258735549c52d3838e89bd80357c88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FLUX-SE/SyliusPayumStripePlugin/zipball/7a7cd5efae258735549c52d3838e89bd80357c88",
+                "reference": "7a7cd5efae258735549c52d3838e89bd80357c88",
+                "shasum": ""
+            },
+            "require": {
+                "flux-se/payum-stripe-bundle": "^1.2",
+                "sylius/sylius": "^1.5"
+            },
+            "require-dev": {
+                "behat/behat": "^3.7",
+                "behat/mink-selenium2-driver": "^1.4",
+                "dmore/behat-chrome-extension": "^1.3",
+                "dmore/chrome-mink-driver": "^2.7",
+                "ext-json": "*",
+                "friends-of-behat/mink": "^1.8",
+                "friends-of-behat/mink-browserkit-driver": "^1.4",
+                "friends-of-behat/mink-extension": "^2.4",
+                "friends-of-behat/page-object-extension": "^0.3",
+                "friends-of-behat/suite-settings-extension": "^1.0",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "friends-of-behat/variadic-extension": "^1.3",
+                "friendsofsymfony/oauth-server-bundle": "^1.6 || >2.0.0-alpha.0 ^2.0@dev",
+                "lakion/mink-debug-extension": "^2.0.0",
+                "phpspec/phpspec": "^7.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-doctrine": "^0.12.26",
+                "phpstan/phpstan-strict-rules": "^0.12.0",
+                "phpstan/phpstan-webmozart-assert": "^0.12.7",
+                "phpunit/phpunit": "^9.5",
+                "sensiolabs/security-checker": "^6.0",
+                "sylius-labs/coding-standard": "^3.2",
+                "symfony/browser-kit": "^4.4 || ^5.2",
+                "symfony/debug-bundle": "^4.4 || ^5.2",
+                "symfony/dotenv": "^4.4 || ^5.2",
+                "symfony/intl": "^4.4 || ^5.2",
+                "symfony/web-profiler-bundle": "^4.4 || ^5.2",
+                "vimeo/psalm": "^4.3"
+            },
+            "type": "sylius-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FluxSE\\SyliusPayumStripePlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Francis HILAIRE",
+                    "email": "Prometee@users.noreply.github.com"
+                }
+            ],
+            "description": "Payum Stripe gateways plugin for Sylius.",
+            "keywords": [
+                "checkout",
+                "gateway",
+                "payum",
+                "sca",
+                "session",
+                "stripe",
+                "sylius",
+                "sylius-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/FLUX-SE/SyliusPayumStripePlugin/issues",
+                "source": "https://github.com/FLUX-SE/SyliusPayumStripePlugin/tree/v1.2.3"
+            },
+            "time": "2021-03-04T13:35:10+00:00"
+        },
+        {
             "name": "friendsofphp/proxy-manager-lts",
             "version": "v1.0.3",
             "source": {
@@ -2399,72 +2441,6 @@
                 "source": "https://github.com/FriendsOfSymfony/FOSCKEditorBundle/tree/2.3.0"
             },
             "time": "2020-12-26T14:29:00+00:00"
-        },
-        {
-            "name": "friendsofsymfony/jsrouting-bundle",
-            "version": "2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "d56600542504148bf2faa2b6bd7571a6adf6799e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/d56600542504148bf2faa2b6bd7571a6adf6799e",
-                "reference": "d56600542504148bf2faa2b6bd7571a6adf6799e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1|^8.0",
-                "symfony/console": "~3.3|^4.0|^5.0",
-                "symfony/framework-bundle": "~3.3|^4.0|^5.0",
-                "symfony/serializer": "~3.3|^4.0|^5.0",
-                "willdurand/jsonp-callback-validator": "~1.0"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~3.3|^4.0|^5.0",
-                "symfony/phpunit-bridge": "^5.1"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FOS\\JsRoutingBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "will+git@drnd.me"
-                },
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
-                }
-            ],
-            "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "Js Routing",
-                "javascript",
-                "routing"
-            ],
-            "support": {
-                "issues": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/issues",
-                "source": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle/tree/2.7.0"
-            },
-            "time": "2020-11-20T10:38:12+00:00"
         },
         {
             "name": "friendsofsymfony/oauth-server-bundle",
@@ -5134,97 +5110,6 @@
             "time": "2020-08-11T18:10:13+00:00"
         },
         {
-            "name": "mollie/mollie-api-php",
-            "version": "v2.29.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mollie/mollie-api-php.git",
-                "reference": "619349868112df2825d7a225d4e92f9fb7e9f2d8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mollie/mollie-api-php/zipball/619349868112df2825d7a225d4e92f9fb7e9f2d8",
-                "reference": "619349868112df2825d7a225d4e92f9fb7e9f2d8",
-                "shasum": ""
-            },
-            "require": {
-                "composer/ca-bundle": "^1.1",
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-openssl": "*",
-                "guzzlehttp/guzzle": "^6.3 || ^7.0",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "eloquent/liberator": "^2.0",
-                "friendsofphp/php-cs-fixer": "^v2.17",
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.1 || ^8.5"
-            },
-            "suggest": {
-                "mollie/oauth2-mollie-php": "Use OAuth to authenticate with the Mollie API. This is needed for some endpoints. Visit https://docs.mollie.com/ for more information."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mollie\\Api\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Mollie B.V.",
-                    "email": "info@mollie.com"
-                }
-            ],
-            "description": "Mollie API client library for PHP. Mollie is a European Payment Service provider and offers international payment methods such as Mastercard, VISA, American Express and PayPal, and local payment methods such as iDEAL, Bancontact, SOFORT Banking, SEPA direct debit, Belfius Direct Net, KBC Payment Button and various gift cards such as Podiumcadeaukaart and fashioncheque.",
-            "homepage": "https://www.mollie.com/en/developers",
-            "keywords": [
-                "Apple Pay",
-                "CBC",
-                "Przelewy24",
-                "api",
-                "bancontact",
-                "banktransfer",
-                "belfius",
-                "belfius direct net",
-                "charges",
-                "creditcard",
-                "direct debit",
-                "fashioncheque",
-                "gateway",
-                "gift cards",
-                "ideal",
-                "inghomepay",
-                "intersolve",
-                "kbc",
-                "klarna",
-                "mistercash",
-                "mollie",
-                "paylater",
-                "payment",
-                "payments",
-                "paypal",
-                "paysafecard",
-                "podiumcadeaukaart",
-                "recurring",
-                "refunds",
-                "sepa",
-                "service",
-                "sliceit",
-                "sofort",
-                "sofortbanking",
-                "subscriptions"
-            ],
-            "support": {
-                "issues": "https://github.com/mollie/mollie-api-php/issues",
-                "source": "https://github.com/mollie/mollie-api-php/tree/v2.29.0"
-            },
-            "time": "2021-01-27T10:05:15+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "2.2.0",
             "source": {
@@ -5319,66 +5204,6 @@
                 }
             ],
             "time": "2020-12-14T13:15:25+00:00"
-        },
-        {
-            "name": "myclabs/php-enum",
-            "version": "1.7.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/php-enum.git",
-                "reference": "d178027d1e679832db9f38248fcc7200647dc2b7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/d178027d1e679832db9f38248fcc7200647dc2b7",
-                "reference": "d178027d1e679832db9f38248fcc7200647dc2b7",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7",
-                "squizlabs/php_codesniffer": "1.*",
-                "vimeo/psalm": "^3.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MyCLabs\\Enum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP Enum contributors",
-                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
-                }
-            ],
-            "description": "PHP Enum implementation",
-            "homepage": "http://github.com/myclabs/php-enum",
-            "keywords": [
-                "enum"
-            ],
-            "support": {
-                "issues": "https://github.com/myclabs/php-enum/issues",
-                "source": "https://github.com/myclabs/php-enum/tree/1.7.7"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/php-enum",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-11-14T18:14:52+00:00"
         },
         {
             "name": "namshi/jose",
@@ -7395,6 +7220,67 @@
             "time": "2020-09-30T13:25:17+00:00"
         },
         {
+            "name": "stripe/stripe-php",
+            "version": "v7.76.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "47e66d4186712be33c593fe820dccf270a04d5d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/47e66d4186712be33c593fe820dccf270a04d5d6",
+                "reference": "47e66d4186712be33c593fe820dccf270a04d5d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.17.1",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.3",
+                "symfony/process": "~3.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v7.76.0"
+            },
+            "time": "2021-03-22T16:50:21+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.5",
             "source": {
@@ -7604,101 +7490,6 @@
                 "source": "https://github.com/SyliusLabs/PolyfillSymfonyEventDispatcher/tree/v1.0.1"
             },
             "time": "2020-11-10T09:36:58+00:00"
-        },
-        {
-            "name": "sylius/admin-order-creation-plugin",
-            "version": "v0.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Sylius/AdminOrderCreationPlugin.git",
-                "reference": "5a31d048ccd152a62c7cd78b3803babf2e516960"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/AdminOrderCreationPlugin/zipball/5a31d048ccd152a62c7cd78b3803babf2e516960",
-                "reference": "5a31d048ccd152a62c7cd78b3803babf2e516960",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofsymfony/jsrouting-bundle": "^2.2",
-                "php": "^7.3",
-                "sylius/sylius": "^1.7"
-            },
-            "conflict": {
-                "symfony/browser-kit": "4.1.8",
-                "symfony/cache": "^5.0",
-                "symfony/dependency-injection": "4.1.8",
-                "symfony/dom-crawler": "4.1.8",
-                "symfony/routing": "4.1.8",
-                "symfony/symfony": "4.1.8"
-            },
-            "require-dev": {
-                "behat/behat": "^3.4",
-                "behat/mink": "^1.7@dev",
-                "behat/mink-browserkit-driver": "^1.3",
-                "behat/mink-extension": "^2.2",
-                "behat/mink-selenium2-driver": "^1.3",
-                "dmore/behat-chrome-extension": "^1.3",
-                "dmore/chrome-mink-driver": "^2.7",
-                "friends-of-behat/page-object-extension": "^0.3",
-                "friends-of-behat/suite-settings-extension": "^1.0",
-                "friends-of-behat/symfony-extension": "^2.0",
-                "friends-of-behat/variadic-extension": "^1.1",
-                "lakion/mink-debug-extension": "^1.2.3",
-                "phpspec/phpspec": "^6.1",
-                "phpstan/phpstan-shim": "^0.11",
-                "phpstan/phpstan-webmozart-assert": "^0.11",
-                "phpunit/phpunit": "^6.5",
-                "se/selenium-server-standalone": "^2.52",
-                "sylius-labs/coding-standard": "^3.0",
-                "symfony/debug-bundle": "^3.4|^4.1",
-                "symfony/dotenv": "^4.2",
-                "symfony/web-profiler-bundle": "^3.4|^4.1",
-                "symfony/web-server-bundle": "^3.4|^4.1"
-            },
-            "type": "sylius-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sylius\\AdminOrderCreationPlugin\\": "src/",
-                    "Tests\\Sylius\\AdminOrderCreationPlugin\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mateusz Zalewski",
-                    "homepage": "http://mpzalewski.com.pl"
-                },
-                {
-                    "name": "Grzegorz Sadowski",
-                    "email": "sadowskigp@gmail.com"
-                },
-                {
-                    "name": "Sylius Team",
-                    "email": "team@sylius.com"
-                }
-            ],
-            "description": "Sylius Plugin for order creation in Admin panel",
-            "keywords": [
-                "admin order creation",
-                "e-commerce",
-                "sylius",
-                "sylius-plugin",
-                "symfony"
-            ],
-            "support": {
-                "issues": "https://github.com/Sylius/AdminOrderCreationPlugin/issues",
-                "source": "https://github.com/Sylius/AdminOrderCreationPlugin/tree/v0.9.1"
-            },
-            "time": "2020-11-03T17:15:13+00:00"
         },
         {
             "name": "sylius/fixtures-bundle",
@@ -8058,100 +7849,6 @@
                 "source": "https://github.com/Sylius/SyliusMailerBundle/tree/v1.6.0"
             },
             "time": "2020-11-10T09:53:22+00:00"
-        },
-        {
-            "name": "sylius/refund-plugin",
-            "version": "v1.0.0-RC.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Sylius/RefundPlugin.git",
-                "reference": "dd88749148216596329300a4713c3e74458b65fc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/RefundPlugin/zipball/dd88749148216596329300a4713c3e74458b65fc",
-                "reference": "dd88749148216596329300a4713c3e74458b65fc",
-                "shasum": ""
-            },
-            "require": {
-                "knplabs/knp-snappy-bundle": "^1.7",
-                "myclabs/php-enum": "^1.7",
-                "php": "^7.3",
-                "sylius/resource-bundle": "^1.6",
-                "sylius/sylius": "^1.7",
-                "symfony/messenger": "^4.4"
-            },
-            "conflict": {
-                "symplify/package-builder": "^8.3.25"
-            },
-            "require-dev": {
-                "behat/behat": "^3.6",
-                "behat/mink": "^1.8",
-                "behat/mink-browserkit-driver": "^1.3",
-                "behat/mink-extension": "^2.3",
-                "behat/mink-selenium2-driver": "^1.4",
-                "dmore/behat-chrome-extension": "^1.3",
-                "dmore/chrome-mink-driver": "^2.7",
-                "friends-of-behat/page-object-extension": "^0.3",
-                "friends-of-behat/suite-settings-extension": "^1.0",
-                "friends-of-behat/symfony-extension": "^2.1",
-                "friends-of-behat/variadic-extension": "^1.3",
-                "lakion/mink-debug-extension": "^1.2.3",
-                "phpspec/phpspec": "^6.0",
-                "phpstan/phpstan": "0.12.29",
-                "phpstan/phpstan-webmozart-assert": "0.12.6",
-                "phpunit/phpunit": "^8.5",
-                "sylius-labs/coding-standard": "^3.2",
-                "symfony/browser-kit": "^4.4",
-                "symfony/debug-bundle": "^4.4",
-                "symfony/dotenv": "^4.4",
-                "symfony/intl": "^4.4",
-                "symfony/web-profiler-bundle": "^4.4",
-                "symfony/web-server-bundle": "^4.4"
-            },
-            "type": "sylius-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sylius\\RefundPlugin\\": "src/",
-                    "Tests\\Sylius\\RefundPlugin\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mateusz Zalewski",
-                    "homepage": "http://mpzalewski.com.pl"
-                },
-                {
-                    "name": "Bartosz Pietrzak",
-                    "homepage": "https://github.com/bartoszpietrzak1994"
-                },
-                {
-                    "name": "Sylius Team",
-                    "email": "team@sylius.com"
-                }
-            ],
-            "description": "Plugin provides basic refunds functionality for Sylius application.",
-            "keywords": [
-                "e-commerce",
-                "refunds",
-                "sylius",
-                "sylius-plugin",
-                "symfony"
-            ],
-            "support": {
-                "issues": "https://github.com/Sylius/RefundPlugin/issues",
-                "source": "https://github.com/Sylius/RefundPlugin/tree/v1.0.0-RC.5"
-            },
-            "time": "2020-11-30T10:26:58+00:00"
         },
         {
             "name": "sylius/registry",
@@ -18736,66 +18433,6 @@
             "time": "2020-10-23T02:01:07+00:00"
         },
         {
-            "name": "stripe/stripe-php",
-            "version": "v6.43.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "42fcdaf99c44bb26937223f8eae1f263491d5ab8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/42fcdaf99c44bb26937223f8eae1f263491d5ab8",
-                "reference": "42fcdaf99c44bb26937223f8eae1f263491d5ab8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "1.*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0",
-                "symfony/process": "~2.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Stripe\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stripe and contributors",
-                    "homepage": "https://github.com/stripe/stripe-php/contributors"
-                }
-            ],
-            "description": "Stripe PHP Library",
-            "homepage": "https://stripe.com/",
-            "keywords": [
-                "api",
-                "payment processing",
-                "stripe"
-            ],
-            "support": {
-                "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/master"
-            },
-            "time": "2019-08-29T16:56:12+00:00"
-        },
-        {
             "name": "sylius-labs/coding-standard",
             "version": "v3.2.1",
             "source": {
@@ -19986,18 +19623,10 @@
             "time": "2020-07-12T23:59:07+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "bitbag/mollie-plugin",
-            "version": "9999999-dev",
-            "alias": "3.3.5",
-            "alias_normalized": "3.3.5.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bitbag/cms-plugin": 20,
-        "bitbag/mollie-plugin": 20
+        "bitbag/cms-plugin": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
