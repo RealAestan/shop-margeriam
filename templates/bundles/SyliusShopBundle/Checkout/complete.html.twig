@@ -24,7 +24,7 @@
             <div class="required field">
                 <div class="ui toggle checkbox">
                     {{ form_widget(form.cgv) }}
-                    <label for="sylius_checkout_complete_cgv" class="required">{{ form.cgv.vars.label|trans({'%link_start%' : '<a href="'~bitbag_cms_get_link_for_code('terms_and_conditions')~'">', '%link_end%' : '</a>'})|raw }}</label>
+                    <label for="sylius_checkout_complete_cgv" class="required">{{ form.cgv.vars.label|trans({'%link_start%' : '<a target="_blank" href="'~bitbag_cms_get_link_for_code('terms_and_conditions')~'">', '%link_end%' : '</a>'})|raw }}</label>
                 </div>
             </div>
             {{ form_rest(form) }}
