@@ -774,7 +774,7 @@ sylius_ui:
                     template: "@SyliusShop/_styles.html.twig"
                     priority: 10
                 stylesheets:
-                    template: "@@App/Shop/_stylesheets.html.twig"
+                    template: "@SyliusShop/_stylesheets.html.twig"
                     priority: 5
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
@@ -788,7 +788,7 @@ sylius_ui:
                     template: "@SyliusShop/_scripts.html.twig"
                     priority: 10
                 javascripts:
-                    template: "@@App/Shop/_javascripts.html.twig"
+                    template: "@SyliusShop/_javascripts.html.twig"
                     priority: 5
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
