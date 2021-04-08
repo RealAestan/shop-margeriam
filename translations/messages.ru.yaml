@@ -5,6 +5,9 @@ sylius:
             courses:
                 menu: 'Мои курсы'
                 empty: 'Вы еще не приобрели ни одного курса'
+    form:
+        complete:
+            cgv: 'Я принимаю %link_start%общие условия использования%link_end%'
 details: 'Подробнее о курсе'
 around: 'примерно'
 rate: 'Тариф'
