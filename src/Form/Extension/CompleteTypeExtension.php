@@ -15,6 +15,7 @@ use Sylius\Bundle\CoreBundle\Form\Type\Checkout\CompleteType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\IsTrue;
 
 final class CompleteTypeExtension extends AbstractTypeExtension
 {
@@ -26,6 +27,10 @@ final class CompleteTypeExtension extends AbstractTypeExtension
                 'required' => true,
                 'label' => 'sylius.form.complete.cgv',
                 'mapped' => false,
+                'validation_groups' => ['sylius'],
+                'constraints' => [
+                    new IsTrue(),
+                ],
             ])
         ;
     }
