@@ -23,8 +23,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "bitbag/cms-plugin": "dev-master",
-        "stefandoorn/sitemap-plugin": "dev-master as 1.1.0",
+        "bitbag/cms-plugin": "~3.0.x-dev",
         "sylius/sylius": "~1.9.0",
         "friendsofsymfony/oauth-server-bundle": ">2.0.0-alpha.0 ^2.0@dev",
         "symfony/dotenv": "^5.2",

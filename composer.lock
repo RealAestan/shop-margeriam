@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e943083470f6fb4af3e5acd4a8f22939",
+    "content-hash": "8ba0f4b658744fc3a9564eaa4b9e5495",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -353,24 +353,24 @@
         },
         {
             "name": "bitbag/cms-plugin",
-            "version": "dev-master",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BitBagCommerce/SyliusCmsPlugin.git",
-                "reference": "e1c3af6d47a859b9a096e3e8e125dafeb4f75448"
+                "reference": "eea5a6297acc61dd9b9dc671e18ede1cae4fe574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BitBagCommerce/SyliusCmsPlugin/zipball/e1c3af6d47a859b9a096e3e8e125dafeb4f75448",
-                "reference": "e1c3af6d47a859b9a096e3e8e125dafeb4f75448",
+                "url": "https://api.github.com/repos/BitBagCommerce/SyliusCmsPlugin/zipball/eea5a6297acc61dd9b9dc671e18ede1cae4fe574",
+                "reference": "eea5a6297acc61dd9b9dc671e18ede1cae4fe574",
                 "shasum": ""
             },
             "require": {
                 "friendsofsymfony/ckeditor-bundle": "^1.1|^2.0",
                 "league/csv": "^9.1",
                 "php": "^7.3",
-                "stefandoorn/sitemap-plugin": "^1.0",
-                "sylius/sylius": "^1.8"
+                "stefandoorn/sitemap-plugin": "^2.0@alpha",
+                "sylius/sylius": "^1.9"
             },
             "conflict": {
                 "symfony/browser-kit": "4.1.8",
@@ -380,34 +380,32 @@
                 "symfony/symfony": "4.1.8"
             },
             "require-dev": {
-                "behat/behat": "^3.6",
-                "behat/mink": "^1.7",
-                "behat/mink-browserkit-driver": "^1.3",
-                "behat/mink-extension": "^2.2",
-                "behat/mink-selenium2-driver": "^1.3",
+                "behat/behat": "^3.7",
+                "behat/mink": "^1.8",
+                "behat/mink-selenium2-driver": "^1.4",
+                "friends-of-behat/mink-browserkit-driver": "^1.4",
+                "friends-of-behat/mink-debug-extension": "^2.0",
+                "friends-of-behat/mink-extension": "^2.4",
                 "friends-of-behat/page-object-extension": "^0.3",
                 "friends-of-behat/suite-settings-extension": "^1.0",
-                "friends-of-behat/symfony-extension": "^2.0",
-                "friends-of-behat/variadic-extension": "^1.1",
-                "lakion/mink-debug-extension": "^1.2.3",
-                "lchrusciel/api-test-case": "^3.0",
-                "matthiasnoback/symfony-config-test": "^3.0",
-                "phpspec/phpspec": "^6.0",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "friends-of-behat/variadic-extension": "^1.3",
+                "friendsofsymfony/oauth-server-bundle": ">2.0.0-alpha.0 ^2.0@dev",
+                "lchrusciel/api-test-case": "^4.1||^5.0",
+                "matthiasnoback/symfony-config-test": "^4.0",
+                "phpspec/phpspec": "^7.0",
                 "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-doctrine": "^0.12",
-                "phpstan/phpstan-symfony": "^0.12",
-                "phpstan/phpstan-webmozart-assert": "^0.12",
-                "phpunit/phpunit": "^6.5",
-                "sensiolabs/security-checker": "^5.0",
-                "sylius-labs/coding-standard": "^3.0",
-                "symfony/browser-kit": "^4.4",
-                "symfony/debug-bundle": "^4.4",
-                "symfony/dotenv": "^4.4",
-                "symfony/intl": "^4.4",
-                "symfony/web-profiler-bundle": "^4.4",
-                "symfony/web-server-bundle": "^4.4"
+                "phpstan/phpstan-doctrine": "^0.12.32",
+                "phpstan/phpstan-symfony": "^0.12.21",
+                "phpstan/phpstan-webmozart-assert": "^0.12.12",
+                "phpunit/phpunit": "^8.0||^9.0",
+                "sylius-labs/coding-standard": "^3.2",
+                "symfony/browser-kit": "^4.4||^5.2",
+                "symfony/debug-bundle": "^4.4||^5.2",
+                "symfony/dotenv": "^4.4||^5.2",
+                "symfony/intl": "^4.4||^5.2",
+                "symfony/web-profiler-bundle": "^4.4||^5.2"
             },
-            "default-branch": true,
             "type": "sylius-plugin",
             "autoload": {
                 "psr-4": {
@@ -427,9 +425,9 @@
             ],
             "support": {
                 "issues": "https://github.com/BitBagCommerce/SyliusCmsPlugin/issues",
-                "source": "https://github.com/BitBagCommerce/SyliusCmsPlugin/tree/master"
+                "source": "https://github.com/BitBagCommerce/SyliusCmsPlugin/tree/3.0"
             },
-            "time": "2021-01-10T10:26:19+00:00"
+            "time": "2021-04-01T12:22:10+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -4143,43 +4141,41 @@
         },
         {
             "name": "lcobucci/jwt",
-            "version": "4.0.3",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "ae4165a76848e070fdac691e773243d10cd06ce1"
+                "reference": "71cf170102c8371ccd933fa4df6252086d144de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/ae4165a76848e070fdac691e773243d10cd06ce1",
-                "reference": "ae4165a76848e070fdac691e773243d10cd06ce1",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/71cf170102c8371ccd933fa4df6252086d144de6",
+                "reference": "71cf170102c8371ccd933fa4df6252086d144de6",
                 "shasum": ""
             },
             "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
+                "ext-sodium": "*",
                 "lcobucci/clock": "^2.0",
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "infection/infection": "^0.20",
+                "infection/infection": "^0.21",
                 "lcobucci/coding-standard": "^6.0",
-                "mikey179/vfsstream": "^1.6",
-                "phpbench/phpbench": "^0.17",
+                "mikey179/vfsstream": "^1.6.7",
+                "phpbench/phpbench": "^1.0@alpha",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12",
                 "phpstan/phpstan-deprecation-rules": "^0.12",
                 "phpstan/phpstan-phpunit": "^0.12",
                 "phpstan/phpstan-strict-rules": "^0.12",
                 "phpunit/php-invoker": "^3.1",
-                "phpunit/phpunit": "^9.4"
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Lcobucci\\JWT\\": "src"
@@ -4203,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/lcobucci/jwt/issues",
-                "source": "https://github.com/lcobucci/jwt/tree/4.0.3"
+                "source": "https://github.com/lcobucci/jwt/tree/4.1.4"
             },
             "funding": [
                 {
@@ -4215,7 +4211,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-23T23:47:22+00:00"
+            "time": "2021-03-23T23:53:08+00:00"
         },
         {
             "name": "league/csv",
@@ -6917,16 +6913,16 @@
         },
         {
             "name": "stefandoorn/sitemap-plugin",
-            "version": "dev-master",
+            "version": "v2.0.0-alpha.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stefandoorn/sitemap-plugin.git",
-                "reference": "b970990b4396e20ccd5078e0b8012271f10490fc"
+                "reference": "e86565a702c1230dfcec105fa7b6a56ea5062574"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stefandoorn/sitemap-plugin/zipball/b970990b4396e20ccd5078e0b8012271f10490fc",
-                "reference": "b970990b4396e20ccd5078e0b8012271f10490fc",
+                "url": "https://api.github.com/repos/stefandoorn/sitemap-plugin/zipball/e86565a702c1230dfcec105fa7b6a56ea5062574",
+                "reference": "e86565a702c1230dfcec105fa7b6a56ea5062574",
                 "shasum": ""
             },
             "require": {
@@ -6943,13 +6939,12 @@
                 "phpunit/phpunit": "^9",
                 "sylius-labs/coding-standard": "^4.0",
                 "symfony/browser-kit": "^5.2",
-                "symfony/debug-bundle": "^5.1",
+                "symfony/debug-bundle": "^4.1",
                 "symfony/dotenv": "^4.2",
                 "symfony/intl": "^4.1",
-                "symfony/web-profiler-bundle": "^5.0",
+                "symfony/web-profiler-bundle": "^4.1",
                 "symfony/web-server-bundle": "^4.1"
             },
-            "default-branch": true,
             "type": "sylius-plugin",
             "extra": {
                 "branch-alias": {
@@ -6968,9 +6963,9 @@
             "description": "Sitemap Plugin for Sylius",
             "support": {
                 "issues": "https://github.com/stefandoorn/sitemap-plugin/issues",
-                "source": "https://github.com/stefandoorn/sitemap-plugin/tree/master"
+                "source": "https://github.com/stefandoorn/sitemap-plugin/tree/v2.0.0-alpha.3"
             },
-            "time": "2021-03-27T11:27:40+00:00"
+            "time": "2021-03-25T07:56:27+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -19658,18 +19653,10 @@
             "time": "2020-07-12T23:59:07+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "stefandoorn/sitemap-plugin",
-            "version": "9999999-dev",
-            "alias": "1.1.0",
-            "alias_normalized": "1.1.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "bitbag/cms-plugin": 20,
-        "stefandoorn/sitemap-plugin": 20,
         "friendsofsymfony/oauth-server-bundle": 20
     },
     "prefer-stable": true,
