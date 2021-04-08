@@ -1,2 +1,0 @@
-bitbag_sylius_mollie_plugin:
-    empty_payment_method_checkout: 'Choisissez un mode de paiement'
