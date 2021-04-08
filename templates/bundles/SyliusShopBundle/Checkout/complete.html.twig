@@ -21,7 +21,7 @@
             {{ sylius_template_event('sylius.shop.checkout.complete.summary', _context) }}
 
             <div class="ui hidden divider"></div>
-            {{ form_row(cgv) }}
+            {{ form_row(form.cgv) }}
             {{ form_rest(form) }}
 
             {{ sylius_template_event('sylius.shop.checkout.complete.before_navigation', {'order': order}) }}
