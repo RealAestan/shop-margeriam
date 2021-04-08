@@ -21,15 +21,16 @@ final class CompleteTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        $isTrue = new IsTrue();
+        $isTrue->message = 'You should agree to our terms';
         $builder
             ->remove('notes')
             ->add('cgv', CheckboxType::class, [
                 'required' => true,
                 'label' => 'sylius.form.complete.cgv',
                 'mapped' => false,
-                'validation_groups' => ['sylius'],
                 'constraints' => [
-                    new IsTrue(),
+                    $isTrue,
                 ],
             ])
         ;
