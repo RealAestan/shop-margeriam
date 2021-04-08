@@ -66,6 +66,10 @@ services:
         class: App\Form\Extension\ProductTranslationTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductTranslationType, priority: -5 }
+    app.form.extension.type.complete:
+        class: App\Form\Extension\CompleteTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\CoreBundle\Form\Type\Checkout\CompleteType, priority: -5 }
     app.block_event_listener.admin.layout.javascripts:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
