@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3e4146d9827e6f5741716f513ea7ee9",
+    "content-hash": "e943083470f6fb4af3e5acd4a8f22939",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -6917,38 +6917,43 @@
         },
         {
             "name": "stefandoorn/sitemap-plugin",
-            "version": "v1.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stefandoorn/sitemap-plugin.git",
-                "reference": "8cc6d9eae08ee14f3055387fb84863fbcf46584a"
+                "reference": "b970990b4396e20ccd5078e0b8012271f10490fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stefandoorn/sitemap-plugin/zipball/8cc6d9eae08ee14f3055387fb84863fbcf46584a",
-                "reference": "8cc6d9eae08ee14f3055387fb84863fbcf46584a",
+                "url": "https://api.github.com/repos/stefandoorn/sitemap-plugin/zipball/b970990b4396e20ccd5078e0b8012271f10490fc",
+                "reference": "b970990b4396e20ccd5078e0b8012271f10490fc",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1",
-                "sylius/sylius": "^1.0"
-            },
-            "conflict": {
-                "sylius/sylius": "1.1.3 || 1.1.4",
-                "symfony/symfony": "3.4.7"
+                "php": "^7.4",
+                "sylius/sylius": "^1.6.0"
             },
             "require-dev": {
-                "lchrusciel/api-test-case": "^2.0|^3.1.0",
-                "matthiasnoback/symfony-dependency-injection-test": "^2.0|^3.0",
-                "phpspec/phpspec": "^4.0|^5.0",
-                "phpstan/phpstan": "^0.11.1",
-                "phpunit/phpunit": "^6.0|^7.0",
-                "sylius-labs/coding-standard": "^3.0"
+                "lchrusciel/api-test-case": "^5.0",
+                "matthiasnoback/symfony-dependency-injection-test": "^4.0",
+                "phpspec/phpspec": "^7.0",
+                "phpstan/phpstan": "^0.12.82",
+                "phpstan/phpstan-strict-rules": "^0.12.9",
+                "phpstan/phpstan-webmozart-assert": "^0.12.12",
+                "phpunit/phpunit": "^9",
+                "sylius-labs/coding-standard": "^4.0",
+                "symfony/browser-kit": "^5.2",
+                "symfony/debug-bundle": "^5.1",
+                "symfony/dotenv": "^4.2",
+                "symfony/intl": "^4.1",
+                "symfony/web-profiler-bundle": "^5.0",
+                "symfony/web-server-bundle": "^4.1"
             },
+            "default-branch": true,
             "type": "sylius-plugin",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -6963,9 +6968,9 @@
             "description": "Sitemap Plugin for Sylius",
             "support": {
                 "issues": "https://github.com/stefandoorn/sitemap-plugin/issues",
-                "source": "https://github.com/stefandoorn/sitemap-plugin/tree/v1.1.1"
+                "source": "https://github.com/stefandoorn/sitemap-plugin/tree/master"
             },
-            "time": "2020-03-04T14:10:42+00:00"
+            "time": "2021-03-27T11:27:40+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -19653,10 +19658,18 @@
             "time": "2020-07-12T23:59:07+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "stefandoorn/sitemap-plugin",
+            "version": "9999999-dev",
+            "alias": "1.1.0",
+            "alias_normalized": "1.1.0.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "bitbag/cms-plugin": 20,
+        "stefandoorn/sitemap-plugin": 20,
         "friendsofsymfony/oauth-server-bundle": 20
     },
     "prefer-stable": true,
