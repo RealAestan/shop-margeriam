@@ -73,13 +73,13 @@ services:
     app.block_event_listener.admin.layout.javascripts:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
-            - '@SyliusAdmin/_javascripts.html.twig'
+            - '@@App/Admin/_javascripts.html.twig'
         tags:
             - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }
     app.block_event_listener.admin.layout.stylesheets:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
-            - '@SyliusAdmin/_stylesheets.html.twig'
+            - '@@App/Admin/_stylesheets.html.twig'
         tags:
             - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.stylesheets, method: onBlockEvent }
     app.listener.shop.menu_builder:
