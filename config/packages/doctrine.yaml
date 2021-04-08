@@ -12,8 +12,6 @@ doctrine:
         charset: UTF8
 
         url: '%env(resolve:DATABASE_URL)%'
-        types:
-            sylius_refund_refund_type: App\Entity\Type\RefundEnumType
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         auto_mapping: true
