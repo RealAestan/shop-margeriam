@@ -25,6 +25,7 @@ final class CompleteTypeExtension extends AbstractTypeExtension
             ->add('cgv', CheckboxType::class, [
                 'required' => true,
                 'label' => 'sylius.form.complete.cgv',
+                'mapped' => false,
             ])
         ;
     }
