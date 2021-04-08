@@ -22,12 +22,13 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "bitbag/cms-plugin": "dev-master",
+        "sylius/sylius": "~1.9.0",
+        "friendsofsymfony/oauth-server-bundle": ">2.0.0-alpha.0 ^2.0@dev",
+        "symfony/dotenv": "^5.2",
         "flux-se/sylius-payum-stripe-plugin": "^1.2",
         "sylius/invoicing-plugin": "^0.14.0",
-        "sylius/sylius": "~1.8.0",
-        "symfony/dotenv": "^4.4",
         "symfony/flex": "^1.9",
         "symfony/webpack-encore-bundle": "^1.9"
     },
@@ -53,11 +54,11 @@
         "phpunit/phpunit": "^8.5",
         "stripe/stripe-php": "^7.0",
         "sylius-labs/coding-standard": "^3.2",
-        "symfony/browser-kit": "^4.4",
-        "symfony/debug-bundle": "^4.4",
-        "symfony/intl": "^4.4",
+        "symfony/browser-kit": "^5.2",
+        "symfony/debug-bundle": "^5.2",
+        "symfony/intl": "^5.2",
         "symfony/maker-bundle": "^1.28",
-        "symfony/web-profiler-bundle": "^4.4"
+        "symfony/web-profiler-bundle": "^5.2"
     },
     "conflict": {
         "symfony/form": "4.4.11|4.4.12"
@@ -94,7 +95,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.3.15"
+            "php": "7.4.15"
         },
         "preferred-install": {
             "*": "dist"
@@ -103,10 +104,11 @@
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "^5.2"
         },
         "branch-alias": {
-            "dev-master": "1.8-dev"
+            "dev-master": "1.9-dev"
         }
     },
     "minimum-stability": "dev"

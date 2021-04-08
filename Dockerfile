@@ -1,7 +1,7 @@
 # the different stages of this Dockerfile are meant to be built into separate images
 # https://docs.docker.com/compose/compose-file/#target
 
-ARG PHP_VERSION=7.3
+ARG PHP_VERSION=7.4
 ARG NODE_VERSION=10
 ARG NGINX_VERSION=1.16
 

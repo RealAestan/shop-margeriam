@@ -22,7 +22,7 @@ class CourseController extends AbstractController
         /** @var ShopUser $user */
         $user = $this->container->get('security.token_storage')->getToken()->getUser();
 
-        return $this->container->get('templating')->renderResponse(
+        return $this->render(
             'Account/course/list.html.twig',
             ['courses' => $user->getCourses()]
         );
@@ -50,7 +50,7 @@ class CourseController extends AbstractController
         });
         $pages = new ArrayCollection(iterator_to_array($iterator));
 
-        return $this->container->get('templating')->renderResponse(
+        return $this->render(
             'Account/course/view.html.twig',
             [
                 'course' => $courseTranslation->getTranslatable(),
@@ -84,7 +84,7 @@ class CourseController extends AbstractController
             return $this->redirectToRoute('sylius_shop_account_course', ['slug' => $slug]);
         }
 
-        return $this->container->get('templating')->renderResponse(
+        return $this->render(
             'Account/course/page.html.twig',
             ['coursePage' => $coursePage]
         );
