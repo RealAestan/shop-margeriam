@@ -7,7 +7,17 @@
 
     <title>{% block title %}{{ sylius.channel.name }}{% endblock %}</title>
 
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f3f3">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset ('meta/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset ('meta/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset ('meta/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('meta/manifest.json') }}">
+    <link rel="mask-icon" href="{{ asset('meta/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-config" content="{{ asset('meta/browserconfig.xml') }}" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     {% block metatags %}
     {% endblock %}

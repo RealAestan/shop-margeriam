@@ -14,13 +14,20 @@
 
         {% include '@SyliusShop/_flashes.html.twig' %}
 
-        {{ form_start(form, {'action': path('sylius_shop_checkout_complete'), 'attr': {'class': 'ui loadable form', 'novalidate': 'novalidate'}}) }}
+        {{ form_start(form, {'action': path('sylius_shop_checkout_complete'), 'attr': {'class': 'ui form'}}) }}
             {{ form_errors(form) }}
             <input type="hidden" name="_method" value="PUT" />
 
             {{ sylius_template_event('sylius.shop.checkout.complete.summary', _context) }}
 
             <div class="ui hidden divider"></div>
+            <div class="required field">
+                <div class="ui toggle checkbox">
+                    {{ form_widget(form.cgv) }}
+                    <label for="sylius_checkout_complete_cgv" class="required">{{ form.cgv.vars.label|trans({'%link_start%' : '<a target="_blank" href="'~bitbag_cms_get_link_for_code('terms_and_conditions')~'">', '%link_end%' : '</a>'})|raw }}</label>
+                </div>
+            </div>
+            {{ form_rest(form) }}
 
             {{ sylius_template_event('sylius.shop.checkout.complete.before_navigation', {'order': order}) }}
 

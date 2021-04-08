@@ -2,6 +2,7 @@
 /* eslint-env browser */
 import 'orejime/dist/orejime';
 import '../styles/orejime.scss';
+import '../styles/app.scss';
 
 const orejimeConfig = {
   elementID: 'cookie-consent',

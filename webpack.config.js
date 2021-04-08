@@ -11,7 +11,7 @@ Encore
   .setPublicPath('/build/shop')
   .addEntry('shop-entry', './assets/shop/entry.js')
   .disableSingleRuntimeChunk()
-  .cleanupOutputBeforeBuild()
+  // .cleanupOutputBeforeBuild()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
   .enableSassLoader();

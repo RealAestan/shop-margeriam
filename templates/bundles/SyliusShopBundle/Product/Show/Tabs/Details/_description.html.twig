@@ -1,0 +1,10 @@
+{% if product.description is not empty %}
+    <style>
+        [data-tab="details"] p, [data-tab="details"] ul, [data-tab="details"] ol {
+            line-height: 1.65rem;
+        }
+    </style>
+    {{ product.description | raw }}
+{% else %}
+    {{ 'sylius.ui.no_description'|trans }}.
+{% endif %}

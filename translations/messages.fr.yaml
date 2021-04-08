@@ -5,3 +5,9 @@ sylius:
             courses:
                 menu: 'Mes cours'
                 empty: 'Vous n''avez pas encore acheté de cours'
+    form:
+        complete:
+            cgv: 'J''accepte les %link_start%conditions générales d''utilisation%link_end%'
+details: 'Détails'
+around: 'around'
+rate: 'Tarif'

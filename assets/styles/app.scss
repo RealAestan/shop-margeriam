@@ -1,0 +1,19 @@
+footer .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item {
+  color: rgba(0,0,0,.8);
+  padding: .6em 0;
+  font-size: 1.1em;
+  margin: 0 0 .575em 0;
+}
+
+footer .ui.link.list.list .item a:not(.ui):hover, .ui.link.list.list a.item:hover {
+  color: rgba(0,0,0,1);
+}
+
+.ui.breadcrumb a {
+  color: #0d47a1;
+}
+
+.ui.breadcrumb a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}

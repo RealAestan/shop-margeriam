@@ -1,10 +1,8 @@
 $orejime-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19) !default;
 $orejime-border-radius: 4px !default;
 
-$orejime-blue: #2185d0 !default;
-$orejime-secondary-blue: #1678c2 !default;
-$orejime-green: #21ba45 !default;
-$orejime-secondary-green: #16ab39 !default;
+$orejime-blue: #1565c0 !default;
+$orejime-green: #008a28 !default;
 
 $orejime-theme-bg: #000 !default;
 $orejime-theme-border: 1px solid #555 !default;
@@ -39,10 +37,12 @@ $orejime-breakpoint-notice: 990px !default;
   color: #fff;
   cursor: pointer;
   border-radius: $orejime-border-radius;
-  padding: 6px 10px;
-  margin-right: 0.5em;
+  padding: .75em 1.5em .75em;
+  line-height: 1em;
+  margin: 0 .5em 0 0;
   border: 1px solid transparent;
   font-weight: 700;
+  min-height: 1em;
 
   &[disabled] {
     opacity: 0.75;
@@ -53,7 +53,7 @@ $orejime-breakpoint-notice: 990px !default;
 .orejime-Button--accept {
   background: $orejime-green;
   &:hover {
-    background: $orejime-secondary-green;
+    text-decoration: underline;
   }
 }
 
@@ -64,7 +64,7 @@ $orejime-breakpoint-notice: 990px !default;
 .orejime-Button--info {
   background: $orejime-blue;
   &:hover {
-    background: $orejime-secondary-blue;
+    text-decoration: underline;
   }
 }
 
