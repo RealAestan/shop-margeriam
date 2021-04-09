@@ -32,8 +32,8 @@ RUN set -eux; \
 		zlib-dev \
 	; \
 	\
-	docker-php-ext-configure gd --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include --with-webp-dir=/usr/include --with-freetype-dir=/usr/include/; \
-	docker-php-ext-configure zip --with-libzip; \
+	docker-php-ext-configure gd; \
+	docker-php-ext-configure zip; \
 	docker-php-ext-install -j$(nproc) \
 		exif \
 		gd \
