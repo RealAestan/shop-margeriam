@@ -11,3 +11,4 @@ sylius:
 details: 'Details'
 around: 'around'
 rate: 'Rate'
+enable_js_course: 'You need to enable Javascript to access the content of the course.'

@@ -11,3 +11,4 @@ sylius:
 details: 'Подробнее о курсе'
 around: 'примерно'
 rate: 'Тариф'
+enable_js_course: 'Вам необходимо включить JavaScript для доступа к содержимому курса.'
