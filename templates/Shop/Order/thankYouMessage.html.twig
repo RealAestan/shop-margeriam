@@ -1,0 +1,5 @@
+{% if order.state == constant('Sylius\\Component\\Order\\Model\\OrderInterface::STATE_FULFILLED') %}
+    <div class="ui segment">
+        {{ 'order_complete_course_message'|trans({'%link_start%' : '<a target="_blank" href="'~path('sylius_shop_account_courses')~'">', '%link_end%' : '</a>'})|raw }}
+    </div>
+{% endif %}
