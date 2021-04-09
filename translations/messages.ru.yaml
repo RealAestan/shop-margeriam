@@ -5,11 +5,11 @@ sylius:
             courses:
                 menu: 'Мои курсы'
                 empty: 'Вы еще не приобрели ни одного курса'
+        item.choice: '{count, plural, =0 {} one {, 1 элемент} other {, # элементы}}'
+        taxes_total: 'Налогов всего'
     form:
         complete:
             cgv: 'Я принимаю %link_start%общие условия использования%link_end%'
-    item.choice: '{count, plural, =0 {} one {, 1 элемент} other {, # элементы}}'
-    taxes_total: 'Налогов всего'
 details: 'Подробнее о курсе'
 around: 'примерно'
 rate: 'Тариф'
