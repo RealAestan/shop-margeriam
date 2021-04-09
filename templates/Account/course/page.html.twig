@@ -137,6 +137,32 @@
 			});
         </script>
     </div>
+	<noscript>
+		<style>
+			#no-script-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 1;
+			}
+			#no-script-container {
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+		<div id="no-script-overlay">
+			<div class="ui segment" id="no-script-container">
+				<p>
+					You need to enable Javascript to access the content of the course.
+				</p>
+			</div>
+		</div>
+	</noscript>
 {% endblock %}
 
 {% block javascripts %}
