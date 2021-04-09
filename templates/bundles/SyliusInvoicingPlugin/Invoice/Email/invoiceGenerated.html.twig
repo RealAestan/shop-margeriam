@@ -1,0 +1,13 @@
+{% block subject %}
+    {{ 'sylius.emails.invoice_generated.subject'|trans }}
+{% endblock %}
+
+<br/><br/>
+
+{% block body %}
+    {% autoescape %}
+        {{ 'sylius.emails.invoice_generated.line1'|trans({'%invoice_id%' : invoice.id, '%order_number%' : invoice.orderNumber}) }}
+        <br/><br/>
+        {{ 'sylius.emails.invoice_generated.line2'|trans }}
+    {% endautoescape %}
+{% endblock %}

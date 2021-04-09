@@ -13,3 +13,7 @@ around: 'around'
 rate: 'Tarif'
 enable_js_course: 'Vous devez activer le JavaScript pour accéder au contenu du cours.'
 order_complete_course_message: 'Vous pouvez lire votre cours sur la page %link_start%"Mes cours"%link_end% de votre compte.'
+sylius.emails.invoice_generated:
+    subject: 'Facture générée'
+    line1: 'La facture avec l''ID %invoice_id% a été générée pour la commande avec le numéro #%order_number%.'
+    line2: 'Vous pouvez trouver le document dans les pièces jointes de cet e-mail.'

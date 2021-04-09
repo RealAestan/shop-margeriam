@@ -31,3 +31,7 @@ sylius_invoicing_plugin:
         seller: 'Продавец'
         tax_id: 'Налоговый идентификатор'
 order_complete_course_message: 'Вы можете прочитать свой курс на странице %link_start%"Мои курсы"%link_end% в вашем аккаунте.'
+sylius.emails.invoice_generated:
+    subject: 'Сгенерированный счет'
+    line1: 'Счет-фактура с идентификатором %invoice_id% был сгенерирован для заказа с номером #%order_number%.'
+    line2: 'Вы можете найти этот документ во вложениях этого письма.'

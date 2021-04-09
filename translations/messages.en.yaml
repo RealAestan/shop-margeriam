@@ -13,3 +13,7 @@ around: 'around'
 rate: 'Rate'
 enable_js_course: 'You need to enable Javascript to access the content of the course.'
 order_complete_course_message: 'You can read your course on %link_start%"My courses"%link_end% page in your account.'
+sylius.emails.invoice_generated:
+    subject: 'Invoice generated'
+    line1: 'Invoice with id %invoice_id% was generated for order with number #%order_number%.'
+    line2: 'You can find the document in this email''s attachments.'
