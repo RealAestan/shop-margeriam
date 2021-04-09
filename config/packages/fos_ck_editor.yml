@@ -1,8 +1,8 @@
 fos_ck_editor:
-    default_config: bitbag_sylius_cms_plugin
+    default_config: ckeditor_full
     configs:
-        bitbag_sylius_cms_plugin:
-            toolbar: bitbag_sylius_cms_plugin
+        ckeditor_full:
+            toolbar: ckeditor_full
             extraPlugins:
                 - 'media'
     plugins:
@@ -11,7 +11,7 @@ fos_ck_editor:
             filename: 'plugin.js'
     toolbars:
         configs:
-            bitbag_sylius_cms_plugin:
+            ckeditor_full:
                 - '@full.document'
                 - '@full.clipboard'
                 - '@full.editing'
