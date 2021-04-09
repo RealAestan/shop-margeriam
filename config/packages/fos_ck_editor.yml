@@ -20,9 +20,23 @@ fos_ck_editor:
                 - '@full.basic_styles'
                 - '@full.paragraph'
                 - '@full.links'
+                - '/'
                 - '@full.insert'
                 - '/'
                 - '@full.styles'
                 - '@full.colors'
                 - '@full.tools'
                 - '@full.about'
+        items:
+            full.document: [ 'Source', '-', 'Save', 'NewPage', 'ExportPdf', 'Preview', 'Print', '-', 'Templates' ]
+            full.clipboard: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ]
+            full.editing: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ]
+            full.forms: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ]
+            full.basic_styles: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ]
+            full.paragraph: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ]
+            full.links: [ 'Link', 'Unlink', 'Anchor' ]
+            full.insert: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ]
+            full.styles: [ 'Styles', 'Format', 'Font', 'FontSize' ]
+            full.colors: [ 'TextColor', 'BGColor' ]
+            full.tools: [ 'Maximize', 'ShowBlocks' ]
+            full.about: [ 'About' ]
