@@ -622,6 +622,10 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
                         event: sylius.shop.order.thank_you.after_message
+                message:
+                    template: "Shop/Order/thankYouMessage.html.twig"
+                    context:
+                        event: sylius.shop.order.thank_you.after_message
 
         sylius.shop.checkout.header:
             blocks:
