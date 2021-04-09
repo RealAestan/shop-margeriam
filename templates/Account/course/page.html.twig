@@ -136,311 +136,315 @@
 				}
 			});
         </script>
-        <script>
-			function stopPrntScr() {
-				var inpFld = document.createElement("input");
-				inpFld.setAttribute("value", "Access Denied");
-				inpFld.setAttribute("width", "0");
-				inpFld.style.height = "0px";
-				inpFld.style.width = "0px";
-				inpFld.style.border = "0px";
-				document.body.appendChild(inpFld);
-				inpFld.select();
-				document.execCommand("copy");
-				inpFld.remove();
-			}
+    </div>
+{% endblock %}
 
-			(function ($) {
-				'use strict';
-				$(function () {
-					$(window).on('keyup', function (e) {
-						let keyCode = e.keyCode ? e.keyCode : e.which;
-						if (keyCode === 44) {
-							stopPrntScr();
-						}
-					});
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+		function stopPrntScr() {
+			var inpFld = document.createElement("input");
+			inpFld.setAttribute("value", "Access Denied");
+			inpFld.setAttribute("width", "0");
+			inpFld.style.height = "0px";
+			inpFld.style.width = "0px";
+			inpFld.style.border = "0px";
+			document.body.appendChild(inpFld);
+			inpFld.select();
+			document.execCommand("copy");
+			inpFld.remove();
+		}
 
-					$(document).on('dragstart', function (event) {
-						let target = $(event.target);
-						if (!target.is("")) {
-							return false;
-						}
-					});
+		(function ($) {
+			'use strict';
+			$(function () {
+				$(window).on('keyup', function (e) {
+					let keyCode = e.keyCode ? e.keyCode : e.which;
+					if (keyCode === 44) {
+						stopPrntScr();
+					}
+				});
+
+				$(document).on('dragstart', function (event) {
+					let target = $(event.target);
+					if (!target.is("")) {
+						return false;
+					}
+				});
 
 
-					$(window).on('keydown', function (event) {
-						var sccp_selObj = window.getSelection();
-						var check_selectors = true;
-						if (!sccp_selObj.rangeCount < 1) {
-							var sccp_selRange = sccp_selObj.getRangeAt(0);
-							var sccp_selection_selector = sccp_selRange.startContainer.parentElement;
-							check_selectors = !$(sccp_selection_selector).is("");
-						}
+				$(window).on('keydown', function (event) {
+					var sccp_selObj = window.getSelection();
+					var check_selectors = true;
+					if (!sccp_selObj.rangeCount < 1) {
+						var sccp_selRange = sccp_selObj.getRangeAt(0);
+						var sccp_selection_selector = sccp_selRange.startContainer.parentElement;
+						check_selectors = !$(sccp_selection_selector).is("");
+					}
 
-						if (check_selectors) {
-							var isOpera = (BrowserDetect.browser === "Opera");
+					if (check_selectors) {
+						var isOpera = (BrowserDetect.browser === "Opera");
 
-							var isFirefox = (BrowserDetect.browser === 'Firefox');
+						var isFirefox = (BrowserDetect.browser === 'Firefox');
 
-							var isSafari = (BrowserDetect.browser === 'Safari');
+						var isSafari = (BrowserDetect.browser === 'Safari');
 
-							var isIE = (BrowserDetect.browser === 'Explorer');
-							var isChrome = (BrowserDetect.browser === 'Chrome');
-							var isMozilla = (BrowserDetect.browser === 'Mozilla');
+						var isIE = (BrowserDetect.browser === 'Explorer');
+						var isChrome = (BrowserDetect.browser === 'Chrome');
+						var isMozilla = (BrowserDetect.browser === 'Mozilla');
 
-							if (BrowserDetect.OS === 'Windows') {
-								if (isChrome) {
-									if (((event.ctrlKey && event.shiftKey) && (
-										event.keyCode === 73 ||
-										event.keyCode === 74 ||
-										event.keyCode === 68 ||
-										event.keyCode === 67))) {
-										return false;
-									}
-								}
-								if (isFirefox) {
-									if (((event.ctrlKey && event.shiftKey) && (
-										event.keyCode === 73 ||
-										event.keyCode === 74 ||
-										event.keyCode === 67 ||
-										event.keyCode === 75 ||
-										event.keyCode === 69)) ||
-										event.keyCode === 118 ||
-										(event.keyCode === 112 && event.shiftKey) ||
-										(event.keyCode === 115 && event.shiftKey) ||
-										(event.keyCode === 118 && event.shiftKey) ||
-										(event.keyCode === 120 && event.shiftKey)) {
-										return false;
-									}
-								}
-								if (isOpera) {
-									if (((event.ctrlKey && event.shiftKey) && (
-										event.keyCode === 73 ||
-										event.keyCode === 74 ||
-										event.keyCode === 67 ||
-										event.keyCode === 88 ||
-										event.keyCode === 69))) {
-										return false;
-									}
-								}
-								if (isIE) {
-									if ((event.keyCode === 123 && event.shiftKey)) {
-										return false;
-									}
-								}
-								if (isMozilla) {
-									if ((event.ctrlKey && event.keyCode === 73) ||
-										(event.altKey && event.keyCode === 68)) {
-										return false;
-									}
-								}
-								if ((event.keyCode === 83 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 65 && event.ctrlKey)) {
-									return false;
-								}
-								if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-									return false;
-								}
-								if ((event.keyCode === 88 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 85 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 80 && event.ctrlKey)) {
-									return false;
-								}
-								if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-									return false;
-								}
-							} else if (BrowserDetect.OS === 'Linux') {
-								if (isChrome) {
-									if (
-										(
-											(event.ctrlKey && event.shiftKey) &&
-											(event.keyCode === 73 ||
-												event.keyCode === 74 ||
-												event.keyCode === 67
-											)
-										) ||
-										(event.ctrlKey && event.keyCode === 85)
-									) {
-										return false;
-									}
-								}
-								if (isFirefox) {
-									if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
-										return false;
-									}
-								}
-								if (isOpera) {
-									if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
-										return false;
-									}
-								}
-								if ((event.keyCode === 83 && event.ctrlKey)) {
-									return false;
-								}
-								if (event.keyCode === 65 && event.ctrlKey) {
-									return false;
-								}
-								if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
-									return false;
-								}
-								if ((event.keyCode === 88 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 85 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
-									return false;
-								}
-								if ((event.keyCode === 80 && event.ctrlKey)) {
-									return false;
-								}
-								if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
-									return false;
-								}
-							} else if (BrowserDetect.OS === 'Mac') {
-								if (isChrome || isSafari || isOpera || isFirefox) {
-									if (event.metaKey && (
-										event.keyCode === 73 ||
-										event.keyCode === 74 ||
-										event.keyCode === 69 ||
-										event.keyCode === 75)) {
-										return false;
-									}
-								}
-								if ((event.keyCode === 83 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 65 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 67 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 88 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 85 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
-									return false;
-								}
-								if ((event.keyCode === 80 && event.metaKey)) {
-									return false;
-								}
-								if (event.keyCode === 123) {
+						if (BrowserDetect.OS === 'Windows') {
+							if (isChrome) {
+								if (((event.ctrlKey && event.shiftKey) && (
+									event.keyCode === 73 ||
+									event.keyCode === 74 ||
+									event.keyCode === 68 ||
+									event.keyCode === 67))) {
 									return false;
 								}
 							}
+							if (isFirefox) {
+								if (((event.ctrlKey && event.shiftKey) && (
+									event.keyCode === 73 ||
+									event.keyCode === 74 ||
+									event.keyCode === 67 ||
+									event.keyCode === 75 ||
+									event.keyCode === 69)) ||
+									event.keyCode === 118 ||
+									(event.keyCode === 112 && event.shiftKey) ||
+									(event.keyCode === 115 && event.shiftKey) ||
+									(event.keyCode === 118 && event.shiftKey) ||
+									(event.keyCode === 120 && event.shiftKey)) {
+									return false;
+								}
+							}
+							if (isOpera) {
+								if (((event.ctrlKey && event.shiftKey) && (
+									event.keyCode === 73 ||
+									event.keyCode === 74 ||
+									event.keyCode === 67 ||
+									event.keyCode === 88 ||
+									event.keyCode === 69))) {
+									return false;
+								}
+							}
+							if (isIE) {
+								if ((event.keyCode === 123 && event.shiftKey)) {
+									return false;
+								}
+							}
+							if (isMozilla) {
+								if ((event.ctrlKey && event.keyCode === 73) ||
+									(event.altKey && event.keyCode === 68)) {
+									return false;
+								}
+							}
+							if ((event.keyCode === 83 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 65 && event.ctrlKey)) {
+								return false;
+							}
+							if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
+								return false;
+							}
+							if ((event.keyCode === 88 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 85 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 80 && event.ctrlKey)) {
+								return false;
+							}
+							if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
+								return false;
+							}
+						} else if (BrowserDetect.OS === 'Linux') {
+							if (isChrome) {
+								if (
+									(
+										(event.ctrlKey && event.shiftKey) &&
+										(event.keyCode === 73 ||
+											event.keyCode === 74 ||
+											event.keyCode === 67
+										)
+									) ||
+									(event.ctrlKey && event.keyCode === 85)
+								) {
+									return false;
+								}
+							}
+							if (isFirefox) {
+								if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 75 || event.keyCode === 69)) || event.keyCode === 118 || event.keyCode === 116 || (event.keyCode === 112 && event.shiftKey) || (event.keyCode === 115 && event.shiftKey) || (event.keyCode === 118 && event.shiftKey) || (event.keyCode === 120 && event.shiftKey) || (event.keyCode === 85 && event.ctrlKey)) {
+									return false;
+								}
+							}
+							if (isOpera) {
+								if (((event.ctrlKey && event.shiftKey) && (event.keyCode === 73 || event.keyCode === 74 || event.keyCode === 67 || event.keyCode === 88 || event.keyCode === 69)) || (event.ctrlKey && event.keyCode === 85)) {
+									return false;
+								}
+							}
+							if ((event.keyCode === 83 && event.ctrlKey)) {
+								return false;
+							}
+							if (event.keyCode === 65 && event.ctrlKey) {
+								return false;
+							}
+							if (event.keyCode === 67 && event.ctrlKey && !event.shiftKey) {
+								return false;
+							}
+							if ((event.keyCode === 88 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 85 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 70 && event.ctrlKey) || (event.keyCode === 71 && event.ctrlKey)) {
+								return false;
+							}
+							if ((event.keyCode === 80 && event.ctrlKey)) {
+								return false;
+							}
+							if (event.keyCode === 123 || (event.keyCode === 123 && event.shiftKey)) {
+								return false;
+							}
+						} else if (BrowserDetect.OS === 'Mac') {
+							if (isChrome || isSafari || isOpera || isFirefox) {
+								if (event.metaKey && (
+									event.keyCode === 73 ||
+									event.keyCode === 74 ||
+									event.keyCode === 69 ||
+									event.keyCode === 75)) {
+									return false;
+								}
+							}
+							if ((event.keyCode === 83 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 65 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 67 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 88 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 85 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 70 && event.metaKey) || (event.keyCode === 71 && event.metaKey)) {
+								return false;
+							}
+							if ((event.keyCode === 80 && event.metaKey)) {
+								return false;
+							}
+							if (event.keyCode === 123) {
+								return false;
+							}
 						}
-					});
-				});
-			})(jQuery);
-
-			var BrowserDetect = {
-				init: function () {
-					this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
-					this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
-					this.OS = this.searchString(this.dataOS) || "an unknown OS";
-				},
-				searchString: function (data) {
-					for (var i = 0; i < data.length; i++) {
-						var dataString = data[i].string;
-						var dataProp = data[i].prop;
-						this.versionSearchString = data[i].versionSearch || data[i].identity;
-						if (dataString) {
-							if (dataString.indexOf(data[i].subString) !== -1) return data[i].identity;
-						} else if (dataProp) return data[i].identity;
 					}
-				},
-				searchVersion: function (dataString) {
-					var index = dataString.indexOf(this.versionSearchString);
-					if (index === -1) return;
-					return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
-				},
-				dataBrowser: [{
-					string: navigator.userAgent,
-					subString: "Chrome",
-					identity: "Chrome"
-				}, {
-					string: navigator.userAgent,
-					subString: "OmniWeb",
-					versionSearch: "OmniWeb/",
-					identity: "OmniWeb"
-				}, {
-					string: navigator.vendor,
-					subString: "Apple",
-					identity: "Safari",
-					versionSearch: "Version"
-				}, {
-					prop: window.opera,
-					identity: "Opera",
-					versionSearch: "Version"
-				}, {
-					string: navigator.vendor,
-					subString: "iCab",
-					identity: "iCab"
-				}, {
-					string: navigator.vendor,
-					subString: "KDE",
-					identity: "Konqueror"
-				}, {
-					string: navigator.userAgent,
-					subString: "Firefox",
-					identity: "Firefox"
-				}, {
-					string: navigator.vendor,
-					subString: "Camino",
-					identity: "Camino"
-				}, { // for newer Netscapes (6+)
-					string: navigator.userAgent,
-					subString: "Netscape",
-					identity: "Netscape"
-				}, {
-					string: navigator.userAgent,
-					subString: "MSIE",
-					identity: "Explorer",
-					versionSearch: "MSIE"
-				}, {
-					string: navigator.userAgent,
-					subString: "Gecko",
-					identity: "Mozilla",
-					versionSearch: "rv"
-				}, { // for older Netscapes (4-)
-					string: navigator.userAgent,
-					subString: "Mozilla",
-					identity: "Netscape",
-					versionSearch: "Mozilla"
-				}],
-				dataOS: [{
-					string: navigator.platform,
-					subString: "Win",
-					identity: "Windows"
-				}, {
-					string: navigator.platform,
-					subString: "Mac",
-					identity: "Mac"
-				}, {
-					string: navigator.userAgent,
-					subString: "iPhone",
-					identity: "iPhone/iPod"
-				}, {
-					string: navigator.platform,
-					subString: "Linux",
-					identity: "Linux"
-				}]
-			};
-			BrowserDetect.init();
-        </script>
-    </div>
+				});
+			});
+		})(jQuery);
+
+		var BrowserDetect = {
+			init: function () {
+				this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+				this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+				this.OS = this.searchString(this.dataOS) || "an unknown OS";
+			},
+			searchString: function (data) {
+				for (var i = 0; i < data.length; i++) {
+					var dataString = data[i].string;
+					var dataProp = data[i].prop;
+					this.versionSearchString = data[i].versionSearch || data[i].identity;
+					if (dataString) {
+						if (dataString.indexOf(data[i].subString) !== -1) return data[i].identity;
+					} else if (dataProp) return data[i].identity;
+				}
+			},
+			searchVersion: function (dataString) {
+				var index = dataString.indexOf(this.versionSearchString);
+				if (index === -1) return;
+				return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+			},
+			dataBrowser: [{
+				string: navigator.userAgent,
+				subString: "Chrome",
+				identity: "Chrome"
+			}, {
+				string: navigator.userAgent,
+				subString: "OmniWeb",
+				versionSearch: "OmniWeb/",
+				identity: "OmniWeb"
+			}, {
+				string: navigator.vendor,
+				subString: "Apple",
+				identity: "Safari",
+				versionSearch: "Version"
+			}, {
+				prop: window.opera,
+				identity: "Opera",
+				versionSearch: "Version"
+			}, {
+				string: navigator.vendor,
+				subString: "iCab",
+				identity: "iCab"
+			}, {
+				string: navigator.vendor,
+				subString: "KDE",
+				identity: "Konqueror"
+			}, {
+				string: navigator.userAgent,
+				subString: "Firefox",
+				identity: "Firefox"
+			}, {
+				string: navigator.vendor,
+				subString: "Camino",
+				identity: "Camino"
+			}, { // for newer Netscapes (6+)
+				string: navigator.userAgent,
+				subString: "Netscape",
+				identity: "Netscape"
+			}, {
+				string: navigator.userAgent,
+				subString: "MSIE",
+				identity: "Explorer",
+				versionSearch: "MSIE"
+			}, {
+				string: navigator.userAgent,
+				subString: "Gecko",
+				identity: "Mozilla",
+				versionSearch: "rv"
+			}, { // for older Netscapes (4-)
+				string: navigator.userAgent,
+				subString: "Mozilla",
+				identity: "Netscape",
+				versionSearch: "Mozilla"
+			}],
+			dataOS: [{
+				string: navigator.platform,
+				subString: "Win",
+				identity: "Windows"
+			}, {
+				string: navigator.platform,
+				subString: "Mac",
+				identity: "Mac"
+			}, {
+				string: navigator.userAgent,
+				subString: "iPhone",
+				identity: "iPhone/iPod"
+			}, {
+				string: navigator.platform,
+				subString: "Linux",
+				identity: "Linux"
+			}]
+		};
+		BrowserDetect.init();
+    </script>
 {% endblock %}
