@@ -32,8 +32,6 @@
             {{ sylius_template_event('sylius.shop.checkout.complete.before_navigation', {'order': order}) }}
 
             {% include '@SyliusShop/Checkout/Complete/_navigation.html.twig' %}
-
-            {{ form_row(form._token) }}
         {{ form_end(form, {'render_rest': false}) }}
     </div>
 {% endblock %}
