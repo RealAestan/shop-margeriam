@@ -179,8 +179,7 @@
 			inpFld.remove();
 		}
 		document.addEventListener('keyup', function (e) {
-			let keyCode = e.keyCode ? e.keyCode : e.which;
-			if (keyCode === 44) {
+			if (e.keyCode === 44) {
 				stopPrntScr();
 			}
 		});
