@@ -29,7 +29,7 @@
     {{ sylius_template_event('sylius.shop.layout.head') }}
 </head>
 
-<body class="pushable">
+<body class="pushable" {% block bodyAttr %}{% endblock %}>
 {{ sylius_template_event('sylius.shop.layout.before_body') }}
 <div class="pusher" id="app">
     {% block top %}
