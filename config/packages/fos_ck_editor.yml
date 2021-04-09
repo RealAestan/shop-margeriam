@@ -1,26 +1,28 @@
 fos_ck_editor:
-    default_config: full
-#    configs:
-#        bitbag_sylius_cms_plugin:
-#            toolbar: bitbag_sylius_cms_plugin
-#            extraPlugins:
-#                - 'media'
-#    plugins:
-#        media:
-#            path: '/bundles/bitbagsyliuscmsplugin/js/ckeditor-plugins/media/'
-#            filename: 'plugin.js'
-#    toolbars:
-#        configs:
-#            bitbag_sylius_cms_plugin:
-#                - '@standard.clipboard'
-#                - '@standard.editing'
-#                - '@standard.links'
-#                - '@standard.insert'
-#                - '@standard.tools'
-#                - '@standard.document'
-#                - '/'
-#                - '@standard.basic_styles'
-#                - '@standard.paragraph'
-#                - '@standard.about'
-#        items:
-#            standard.insert: ['Image', 'Media', 'Table', 'HorizontalRule', 'SpecialChar']
+    default_config: bitbag_sylius_cms_plugin
+    configs:
+        bitbag_sylius_cms_plugin:
+            toolbar: bitbag_sylius_cms_plugin
+            extraPlugins:
+                - 'media'
+    plugins:
+        media:
+            path: '/bundles/bitbagsyliuscmsplugin/js/ckeditor-plugins/media/'
+            filename: 'plugin.js'
+    toolbars:
+        configs:
+            bitbag_sylius_cms_plugin:
+                - '@full.document'
+                - '@full.clipboard'
+                - '@full.editing'
+                - '@full.forms'
+                - '/'
+                - '@full.basic_styles'
+                - '@full.paragraph'
+                - '@full.links'
+                - '@full.insert'
+                - '/'
+                - '@full.styles'
+                - '@full.colors'
+                - '@full.tools'
+                - '@full.about'
