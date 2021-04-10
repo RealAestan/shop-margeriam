@@ -1,4 +1,4 @@
 sylius_mailer:
     sender:
-        name: Margeriam
-        address: contact@margeriam.com
+        name: 'Margeriam'
+        address: 'contact@margeriam.com'
