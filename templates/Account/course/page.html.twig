@@ -90,7 +90,7 @@
         <div class="course-container">
             {% set previousPage = coursePage.previousPage %}
             {% set nextPage = coursePage.nextPage %}
-            {{ coursePage.content|raw }}
+            {{ coursePage.content|replace('<iframe', '<iframe allow="fullscreen; picture-in-picture" allowfullscreen ')|raw }}
             <div style="display: flex;justify-content: space-between; flex-wrap: wrap;">
                 {% if previousPage %}
                     <a style="margin: 5px 5px 5px 0;" class="ui primary icon labeled button" href="{{ path('sylius_shop_account_course_page', {slug: coursePage.course.slug, pageSlug: previousPage.slug}) }}">
