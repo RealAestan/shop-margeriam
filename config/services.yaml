@@ -90,3 +90,15 @@ services:
         class: App\Order\OrderEventListener
         tags:
             - { name: doctrine.event_listener, event: postUpdate }
+    Sylius\InvoicingPlugin\Email\InvoiceEmailSender:
+        class: App\Email\InvoiceEmailSender
+        arguments:
+            - '@sylius.email_sender'
+            - '@sylius_invoicing_plugin.generator.invoice_pdf_file'
+            - '@sylius.context.locale'
+            - '@bitbag_sylius_cms_plugin.repository.page'
+            - '@knp_snappy.pdf'
+        public: true
+    sylius_invoicing_plugin.email.invoice_email_sender:
+        alias: Sylius\InvoicingPlugin\Email\InvoiceEmailSender
+        public: true
