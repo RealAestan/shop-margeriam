@@ -51,3 +51,5 @@ sylius_shop_account_course_page:
         _controller: App\Controller\CourseController:coursePageAction
     requirements:
         _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+sylius_paypal_webhook:
+    resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
