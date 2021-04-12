@@ -1,11 +1,4 @@
-{% if products|length % 2 == 0 %}
-    {% set columns = "two" %}
-{% endif %}
-{% if products|length % 2 == 1 %}
-    {% set columns = "three" %}
-{% endif %}
-
-<div class="ui {{ columns|default('') }} cards">
+<div class="ui two cards">
     {% for product in products %}
         {% include '@SyliusShop/Product/_box.html.twig' %}
     {% endfor %}
