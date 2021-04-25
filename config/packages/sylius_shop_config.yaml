@@ -67,9 +67,9 @@ sylius_ui:
                 currency_switcher:
                     template: "@SyliusShop/Layout/Topbar/_currencySwitcher.html.twig"
                     priority: 30
-                locale_switcher:
-                    template: "@SyliusShop/Layout/Topbar/_localeSwitcher.html.twig"
-                    priority: 20
+#                locale_switcher:
+#                    template: "@SyliusShop/Layout/Topbar/_localeSwitcher.html.twig"
+#                    priority: 20
                 before_security_widget_legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 15
