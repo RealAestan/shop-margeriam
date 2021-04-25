@@ -9,6 +9,9 @@ sylius:
     form:
         complete:
             cgv: 'Я принимаю %link_start%общие условия использования%link_end%'
+        user:
+            password:
+                confirmation: 'Повторите пароль'
     pay_pal:
         back_to_store: 'Назад в магазин'
         billing_info: 'Платежный адрес такой же, как и в заказе'
