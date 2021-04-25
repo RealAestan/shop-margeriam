@@ -11,7 +11,7 @@ sylius:
             cgv: 'Я принимаю %link_start%общие условия использования%link_end%'
     pay_pal:
         back_to_store: 'Назад в магазин'
-        billing_info: 'Платежный адрес такой же, как и заказ'
+        billing_info: 'Платежный адрес такой же, как и в заказе'
         client_id: 'Идентификатор клиента'
         client_secret: 'Секрет клиента'
         credit_card: 'карта'
