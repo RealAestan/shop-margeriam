@@ -36,7 +36,16 @@
             {% if product.isConfigurable() and product.getVariantSelectionMethod() == 'match' and not product.variants.empty() %}
                 {% include '@SyliusShop/Product/Show/_variantsPricing.html.twig' with {'pricing': sylius_product_variant_prices(product, sylius.channel)} %}
             {% endif %}
-            {% include '@SyliusShop/Product/Show/_inventory.html.twig' %}
+            {% if product.enabledVariants.empty() %}
+                <div class="ui small negative icon message" id="sylius-product-not-available">
+                    <i class="remove icon"></i>
+                    <div class="content">
+                        {{ 'sylius.ui.unavailable'|trans }}
+                    </div>
+                </div>
+            {% else %}
+                {% include '@SyliusShop/Product/Show/_inventory.html.twig' %}
+            {% endif %}
             <div class="ui hidden divider"></div>
 
             {{ sonata_block_render_event('sylius.shop.product.show.after_add_to_cart', {'product': product}) }}
